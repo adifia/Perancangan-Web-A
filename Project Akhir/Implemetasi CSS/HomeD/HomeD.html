@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Beauty of East Java</title>
+    <link rel="icon" href="Ikon.ico">
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    /*HEADER*/
+    .bar{
+        width: 100%;
+        height: 20px;
+        background-color:white;
+    }
+    .bahasa li { 
+        list-style: none; /*agar tidak ada bullets*/\
+    }
+    .bahasa li a{
+        text-decoration: none; /*biar gak ada garis bawahnya*/
+    }
+    .bahasa{
+        margin-top: 0px;
+        float:right;
+        font-size: 12px;
+        font-family:"Calibri";
+        line-height: 20px; /*ukuran blok*/
+    }
+    .bahasa li a { /*English-UK*/
+        width:100px;
+        display: block; /*kalo gak ada, jadi ke kanan*/
+        text-align:center; 
+        color:black;
+    }
+    .bahasa li:hover ul { /*muncul pilihan bahasa*/
+        display:block;
+    }
+    .bahasa ul { /*pilihan bahasa*/
+        display:none; /*biar gak kelihatan sebelum di tunjuk*/
+        list-style:none; 
+        position:absolute; 
+        background-color:#B3FF9E;
+        color: black; /*gak berubah*/
+        top:20px;
+        }
+    .bahasa ul li a:hover { /*hover pilihan bahasa*/
+        background-color:#012F52; 
+        color: white;
+        display:block;
+    }
+    .bahasa ul li a { /*kotak pilihan bahasa*/
+        display:block;
+        padding-left: 10px;
+        text-align:left;
+        width:80px;
+        height:25px;
+    }
+    .logo{
+        float: left;
+        width: 170px;
+        }
+    .logo img{
+        align:left;
+        height: 90px;
+        width: 170px;
+        }
+    .header {
+        background:#012F52;
+        width: 100%;
+        height: 90px;
+    }
+    .header ul { 
+        list-style: none; /*agar tidak ada bullets*/
+    }
+    .utama button{
+        background-color:#2F8758;
+        float: right;
+        padding: 3px 55px 3px 55px;
+        border: none;
+        margin-top: 40px;
+        margin-right: 5px;
+        cursor:pointer;
+    }
+    .utama a{
+        text-decoration: none;
+        color: white;
+    }
+    .menu button:hover{
+        background-color: white;     
+        color:#2F8758;
+    }
+    .menu a:hover{
+        color:#2F8758;
+    }
+    .login button img{
+        height: 25px;
+        width: 25px;
+    }
+    .login button{
+        float: right;
+        background-color: #2F8758;
+        color: white;
+        border: none;
+        margin-top: 34px;
+        margin-right: 10px;
+        padding : 3px 15px 3px 15px;
+        cursor: pointer;
+    }
+    .login a{
+        text-decoration: none;
+        color: white;
+    }
+    .login button:hover{
+        background-color: white;
+        color:#2F8758;
+    }
+    /*CONTENT*/
+    body{
+        background-color: white;
+    }
+    .slide img{
+        width: 1200px;
+        height: 500px;
+    }
+    .slider{ /*lebar slide pada halaman*/
+        width: 1200px;
+        height: 500px;
+        overflow: hidden;
+        border: none;
+    }
+    .slide{
+        width: 1200px;
+        height: 500px;
+        float: left;
+        position: relative;
+        }
+    .slide-holder{
+        width: 400%;
+        position: relative;
+        left: 0;
+        -webkit-animation: scroller 10s infinite;
+        animation: scroller 20s infinite;
+    }
+    @-webkit-keyframes scroller{
+        0%{
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        33%{
+            -webkit-transform: translateX(-1200px);
+            transform: translateX(-1200px);
+        }
+        66% {
+            -webkit-transform: translateX(-2400px);
+            transform: translateX(-2400px);
+        }
+    }
+    .slider {
+        margin: 0 auto;
+    }
+    .cari{
+        height: 50px;
+        float: left;
+        margin-left: 400px;
+        margin-top: 20px;
+    }
+    .cari input{
+        height: 25px;
+        width: 250px;
+    }
+    .content .cari button{
+        background-color:#2F8758;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        border: #2F8758;
+        cursor:pointer;
+    }
+    .cari button:hover{
+        background-color: white;
+        color:#2F8758;
+    }
+    .judul{
+        margin-top: 40px ;
+        margin-left: 30px;
+        position: absolute;
+        z-index: 1;
+        font-weight: bold;
+    }
+    .referensi{
+        margin-top: 50px;
+        text-align: center;
+        color:deepskyblue;
+    }
+    .referensi table td img{
+        width: 300px;
+        height: 200px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .referensi table td{
+        font-family: Calibri;
+        font-size: 15px;
+        text-align: center;
+    }
+    .referensi table td a{  
+        text-decoration: none;
+        color: black;
+    }
+
+    /*FOOTER*/
+    .footer{
+        position: absolute;
+        margin-bottom: 0px;
+        width: 100%;
+        background-color: #B3FF9E;
+        height: 90px;
+        font-family: Calibri;
+        font-size: 15px;
+    }
+    .footer .footer-menu{
+        margin-top: 20px; 
+    }
+    .footer .footer-menu li a{
+        text-decoration: none;
+        margin-left: 30px;
+        color: black;
+    }
+    .footer .footer-menu li a:hover{
+        color:#012F52;
+    }
+    .sosmed{
+        text-align: center;
+        list-style: none;
+        float: right;
+        margin-right: 30px;
+        color: black;
+    }
+    .sosmed img{
+        width: 25px;
+        height: 25px;
+    }
+    .footer h5{
+        text-align: left;
+        margin-left: 600px;
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="bahasa">
+            <li><a href="#">English-UK</a>
+                <ul>
+                    <li><a href="#">English-US</a></li>
+                    <li><a href="#">Indonesian</a></li>
+                </ul>
+            </li>
+        </div>
+    </div>
+    <nav class="header">
+        <ul>
+            <div class="logo">
+                <img src="Logo.png" alt="home">
+            </div>
+            <div class="menu">
+                <div class="login">
+                    <button type="button"><a href="LoginD.html"><img src="Akun.png"><br><font face="Calibri"; font size="2px">Login</font></button>
+                </div>
+            <div class="utama">
+                <button type="button"><a href="EventD.html"><font face="Freestyle script"; font size="6px">Let's See an Event</font></a></button>
+                <button type="button"><a href="WisataD.html"><font face="Freestyle script"; font size="6px">Goes to Wisata</font></a></button>
+            </div>
+        </ul>
+    </nav>
+        
+    </nav>
+    <div class="content">
+        <div class="cari" align="right">
+            <input class="search" type="text" placeholder="Search here...">
+            <button type="button" value="Search">Search</button>
+        </div>
+        <div class="judul">
+            <font face="Shalinta"; font size=6px; font color="#00FF7F">Welcome to</font><br>
+            <font face="Shalinta"; font size="10px"; font color="#FF8C00">the Beauty of East Java</font><br>
+        </div>
+        <div class="slider">
+            <div class="slide-holder">
+                <div class="slide"><img src="Bromo.jpg" alt=""/></div>
+                <div class="slide"><img src="merah.jpg" alt=""/></div>
+                <div class="slide"><img src="MNP.jpg" alt=""/></div>
+            </div>
+        </div>
+        <div class="referensi"><font face="Freestyle script"; font size="20px">Refresh your day!</font>
+            <table border="0" width="1200px">
+                <tr>
+                    <td><img src="GBromo-Probolinggo.jpg"></td>
+                    <td><img src="GiliLabak-Madura.jpg"></td>
+                    <td><img src="CiputraWaterPark-Surabaya.jpg"></td>
+                    <td><img src="GuaGong-Pacitan.jpg"></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Gunung Bromo - Probolinggo</a></td>
+                    <td><a href="#">Pantai Gili Labak - Madura</a></td>
+                    <td><a href="#">Ciputra Water Park - Surabaya</a></td>
+                    <td><a href="#">Gua Gong - Pacitan</a></td>
+                </tr>
+                <tr>
+                    <td><img src="MJatimPark3.jpg"></td>
+                    <td><img src="TelagaSarangan-Magetan.jpg"></td>
+                    <td><img src="KawahIjen-BWI.jpg"></td>
+                    <td><img src="PuncakB29-Lumajang.jpg"></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Jatim Park 3 - Malang</a></td>
+                    <td><a href="#">Telaga Sarangan - Magetan</a></td>
+                    <td><a href="#">Kawah Ijen-Banyuwangi</a></td>
+                    <td><a href="#">Puncak B29 - Lumajang</a></td>
+                </tr>
+            </table>
+        </div>
+    </div><br><br><br>
+    <div class="footer">
+        <ul class="footer-menu">
+            <li>
+                <a class="cookie" href="CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
+                <a class="aboutUs" href="AboutUs.html">About us&emsp;&emsp;|</a>
+                <a class="contact" href="ContactUs.html">Contact Us</a>
+                <ul class="sosmed">
+                    <li>
+                        Follow us on :<br>
+                        <a class="instagram" href="instagram.com/BeautyEastJava"><img src="instagram.png" alt=""></a>
+                        <a class="facebook" href="facebook.com/BeautyEastJava"><img src="facebook.png" alt=""></a>
+                        <a class="twitter" href="twitter.com/BeautyEastJava"><img src="twitter.png" alt=""></a>
+                        <a class="youtube" href="youtube.com/BeautyEastJava"><img src="youtube.png" alt=""></a>
+                    </li>
+                </ul>
+            </li>
+        </ul><br>
+        <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
+    </div>
+</body>
+</html>
