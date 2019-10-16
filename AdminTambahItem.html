@@ -7,10 +7,10 @@
     <title>Tambah item</title>
     <link rel="icon" href="img/Ikon.ico">
     <style>
-    *{
-        margin: 0px;
-        padding: 0px;
-        /*background-color: grey;*/
+        *{
+            margin: 0px;
+            padding: 0px;
+            /*background-color: grey;*/
         }
         /*HEADER*/
         .logo{
@@ -38,7 +38,12 @@
         .akun a{
             text-decoration: none;
             color: white;
-            font-size: 30px;
+            font-size: 15px;
+        }
+        .akun img {
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
         }
         .content{
             background-color: white;
@@ -67,13 +72,15 @@
             border: none;
             font-size: 15px;
             font-weight: bold;
-            margin-top: 80px;
-            margin-left: 700px;
+            margin-top: 20px;
+            float: right;
+            /*margin-left: 700px;*/
         }
         .content button:hover{
             background-color: #7FFF00;
+            color: white;
         }
-        </style>
+    </style>
 </head>
 <body>
     <div class="header">
@@ -81,7 +88,7 @@
             <a href="HomeD.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><font face="Freestyle script">Admin</a></font></button>
+            <button type="button"><a href="Akun.html"><img src="img/Akun.png" alt="profile"><br><font face="Freestyle script">Admin</a></font></button>
         </div>
     </div>
     <div class="content">
@@ -107,8 +114,15 @@
                 <td>Masukkan beberapa gambar</td>
                 <td><input type="file"></td>
             </tr>
+            <tr>
+                <td>
+                    <a href="admin.html"><button type="button">Kembali</button></a>
+                </td>
+                <td>
+                    <a href="admin.html"><button type="button">Tambahkan</button></a>
+                </td>
+            </tr>
         </table>
-        <button type="button">Tambahkan</button>
     </div>
 </body>
 </html>

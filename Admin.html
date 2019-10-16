@@ -8,8 +8,8 @@
     <link rel="icon" href="img/Ikon.ico">
     <style>
         *{
-        margin: 0px;
-        padding: 0px;
+            margin: 0px;
+            padding: 0px;
         }
         /*HEADER*/
         .logo{
@@ -37,7 +37,12 @@
         .akun a{
             text-decoration: none;
             color: white;
-            font-size: 40px;
+            font-size: 15px;
+        }
+        .akun img {
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
         }
         /*CONTENT*/
         .namaKota{
@@ -75,91 +80,151 @@
             color: black;
         }
         .cari:hover {
-           transform: translate(150px, 0);
-           animation-timing-function: 1s ease-in; /*awal pelan*/
-        }
-        .cari .title {
-            top: 50%;
-            position: absolute;
-            transform: rotate(270deg);
-            right: 0px;
-            font-weight: 800;
-            font-size: 15px;
-        }
-        .cariKota{
-            position: absolute;
-            top: 15px;
-        }
-        .cariKota input{
-            width: 140px;
-            float: right;
-            margin-right: 40px;
-        }
-        .cariKota button{
-            width: 80px;
-            float: right;
-            margin-top: 5px;
-            margin-left: 27px;
-            margin-right: 70px;
-            background-color: lightseagreen;
-            border: none;
-            padding-top: 3px;
-            padding-bottom: 3px;
-            color: white;
-        }
-        .cari .listKota {
-            position: absolute;
-            top: 15%;
-            left: 60px;
-            font-family: calibri;
-            font-size: 16px;
-            width: 130px;
-            height: 400px;
-            overflow-y: auto;
-        }
-        .cari .listKota li {
-            line-height: 30px;
-            list-style: none;
-        }
-        .cari .listKota li a {
-            text-decoration: none;
-            color: black;
-        }
-        .cari .listKota li a:hover{
-            color: lightseagreen;
-            }
-        .gambar{
-            margin-top: 30px;
-            margin-left: 50px;
-        }
+         transform: translate(150px, 0);
+         animation-timing-function: 1s ease-in; /*awal pelan*/
+     }
+     .cari .title {
+        top: 50%;
+        position: absolute;
+        transform: rotate(270deg);
+        right: 0px;
+        font-weight: 800;
+        font-size: 15px;
+    }
+    .cariKota{
+        position: absolute;
+        top: 15px;
+    }
+    .cariKota input{
+        width: 140px;
+        float: right;
+        margin-right: 40px;
+    }
+    .cariKota button{
+        width: 80px;
+        float: right;
+        margin-top: 5px;
+        margin-left: 27px;
+        margin-right: 70px;
+        background-color: lightseagreen;
+        border: none;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        color: white;
+    }
+    .cari .listKota {
+        position: absolute;
+        top: 15%;
+        left: 60px;
+        font-family: calibri;
+        font-size: 16px;
+        width: 130px;
+        height: 400px;
+        overflow-y: auto;
+    }
+    .cari .listKota li {
+        line-height: 30px;
+        list-style: none;
+    }
+    .cari .listKota li a {
+        text-decoration: none;
+        color: black;
+    }
+    .cari .listKota li a:hover{
+        color: lightseagreen;
+    }
+    .gambar{
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .gambar img{
+        list-style: none;
+        width: 270px;
+        height: 180px;
+        margin-left: 40px;
+        margin-right: 3px;
+    }
+    .gambar table td{
+        font-family: Calibri;
+        font-size: 15px;
+        text-align: center;
+    }
+    @media screen and (max-width:1000px){
         .gambar img{
-            list-style: none;
-            width: 270px;
-            height: 180px;
-            margin-left: 40px;
-            margin-right: 3px;
+            width: 180px;
+            height: 80px;
         }
-        .gambar table td{
-            font-family: Calibri;
-            font-size: 15px;
-            text-align: center;
+    }
+    table td .button{
+        float: right;
+        padding: 10px 40px 10px 40px;
+        background-color: #7FFF00;
+        border: 0px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .th button{
+        padding: 5px;
+        width: 100px;
+        background-color: #20B2AA;
+        text-align: center;
+        position: relative;
+        left: 18px;
+    }
+    .gambar {
+        margin-right: 10px;
+    }
+
+    .item_gambar{
+        float: left;
+        padding: 5px;
+        width: 23%;
+        margin-right: 5px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .gambar_wrap{
+        /*width: 200px;*/
+        margin: auto;
+    }
+
+    .gambar_wrap img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .tombol button {
+        padding: 10px 40px 10px 40px;
+        background-color: #7FFF00;
+        border: 0px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: -20px;
+        margin-left: 90px;
+        width: 25%;
+        /*text-align: center;*/
+    }
+    .tombol button:hover {
+        background-color: deepskyblue;
+        color: white;
+    }
+
+    @media screen and (max-width: 900px){
+        .item_gambar{
+            width: 40%;
         }
-        @media screen and (max-width:1000px){
-            .gambar img{
-                width: 180px;
-                height: 80px;
-            }
+    }
+
+    @media screen and (max-width: 600px){
+        .item_gambar{
+            width: 90%;
+            padding-right: 10px;
         }
-        table td .button{
-            float: right;
-            padding: 10px 40px 10px 40px;
-            background-color: #7FFF00;
-            border: 0px;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-    </style>
+    }
+
+</style>
 </head>
 <body>
     <div class="header">
@@ -167,7 +232,7 @@
             <a href="HomeD.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><font face="Freestyle script">Admin</a></font></button>
+            <button type="button"><a href="imgAkun.html"><img src="img/Akun.png" alt="profile"><br><font face="Freestyle script">Admin</a></font></button>
         </div>
     </div>
     <div class="content">
@@ -181,10 +246,10 @@
         </div>
         <div class="cari">
             <div class="title">SEARCH</div>
-                <div class="cariKota">
-                    <input type="search">
-                    <button type="button">Search</button>
-                </div>
+            <div class="cariKota">
+                <input type="search">
+                <button type="button">Search</button>
+            </div>
             <ul class="listKota">
                 <li><a href="#">Bangkalan</a></li>
                 <li><a href="#">Banyuwangi</a></li>
@@ -219,16 +284,133 @@
                 <li><a href="#">Tulungagung</a></li>
             </ul>
         </div>
+
+        <div class="tombol">
+            <a href="AdminTambahItem.html"><button class="button">Tambah Destinasi</button></a>
+        </div>
+
         <div class="gambar">
-            <table border="0">
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <button>Edit</button>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+
+            <!-- table border="0">
                 <tr>
                     <td colspan="4"><a href="AdminTambahItem.html"><button class="button">Tambah Destinasi</button></a></td>
                 </tr>
                 <tr>
-                    <td><a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a></td>
-                    <td><a href="EditKD.html"><img src="img/MKampungTridi.jpg"></a></td>
-                    <td><a href="Selecta.html"><img src="img/MSelecta.jpg"></a></td>
-                    <td><a href="MuseumA.html"><img src="img/MMuseumAngkut.png"></a></td>
+                    <td><a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a><br>
+                        <div class="th"><button>Edit</button>    <button>Hapus</button>
+                        </div>
+                    </td>
+                    <td><a href="EditKD.html"><img src="img/MKampungTridi.jpg"></a><br>
+                        <div class="th"><button>Edit</button>    <button>Hapus</button>
+                        </div>
+                    </td>
+                    <td><a href="Selecta.html"><img src="img/MSelecta.jpg"></a><br>
+                        <div class="th"><button>Edit</button>    <button>Hapus</button>
+                        </div>
+                    </td>
+                    <td><a href="MuseumA.html"><img src="img/MMuseumAngkut.png"></a><br>
+                        <div class="th"><button>Edit</button>    <button>Hapus</button>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Jatim Park 3</td>
@@ -272,8 +454,9 @@
                     <td>Candi Batu</td>
                     <td>Paralayang</td>
                 </tr>
-            </table>
+            </table> -->
         </div> 
     </div>
+
 </body>
 </html>
