@@ -8,8 +8,8 @@
     <link rel="icon" href="img/Ikon.ico">
     <style>
         *{
-        margin: 0px;
-        padding: 0px;
+            margin: 0px;
+            padding: 0px;
         }
         /*HEADER*/
         .logo{
@@ -109,6 +109,7 @@
             height: 180px;
             margin-left: 31px;
             margin-right: 31px;
+            transition: transform .2s;
         }
         .gambar table td{
             font-family: Calibri;
@@ -152,77 +153,105 @@
             margin-left: 600px;
             color: black;
         }
+        .utama button{
+            background-color:#2F8758;
+            float: right;
+            padding: 3px 55px 3px 55px;
+            border: none;
+            margin-top: 40px;
+            margin-right: 5px;
+            cursor:pointer;
+        }
+
+        .utama a{
+            text-decoration: none;
+            color: white;
+        }
+        .utama button:hover{
+            background-color: white;     
+            color:#2F8758;
+        }
+        .utama a:hover{
+            color:#2F8758;
+        }
+        .gambar img:hover {
+            transform: scale(1.3);
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <a href="HomeD.html"><img src="img/Logo.png"></a>
+            <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
             <button type="button"><a href="img/Akun.html"><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+        </div>
+        <div class="utama">
+            <button type="button"><a href="event.html"><font face="Freestyle script"; font size="6px">Let's See an Event</font></a></button>
+            <button type="button"><a href="wisata.html"><font face="Freestyle script"; font size="6px">Goes to Wisata</font></a></button>
         </div>
     </div>
     <div class="content">
         <div class="judul">
             <font face="Freestyle Script">East Java's Culture</font>
-            </li>
-        </div>
-        <div class="filter">
-            <li><a href="#"><img src="img/filter.png"></a></button>
-                <ul>
-                    <li><a href="#">Tempat Terdekat</a></li>
-                    <li><a href="#">Tanggal Terdekat</a></li>
-                </ul>
-            </li>
-        </div>
-        <div class="gambar">
-            <table border="0">
-                <tr>
-                    <td><img src="img/EMajapahit.jpg"></td>
-                    <td><img src="img/EJFC.jpg"></td>
-                    <td><img src="img/EBromo.jpg"></td>
-                    <td><img src="img/EFlower.jpg"></td>
-                </tr>
-                <tr>
-                    <td>Majapahit International Travel Tour</td>
-                    <td>Jember Fashion Carnaval</td>
-                    <td>Yahya Kasada dan Eksotika Bromo</td>
-                    <td>Flower Fashion Carnaval</td>
-                </tr>
-                <tr>
-                    <td><img src="img/ETour.jpg"></td>
-                    <td><img src="img/EEthno.jpg"></td>
-                    <td><img src="img/EGandrung.jpg"></td>
-                    <td><img src="img/EJSN.jpg"></td>
-                </tr>
-                <tr>
-                    <td>International Tour de Banyuwangi Ijen</td>
-                    <td>Banyuwangi Ethno Carnaval</td>
-                    <td>Festival Gandrung Sewu</td>
-                    <td>Jatim Spectacular Night</td>
-                </tr>
-            </table>
-        </div>
-    </div><br><br><br>
-    <div class="footer">
-        <ul class="footer-menu">
-            <li>
-                <a class="cookie" href="img/CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
-                <a class="aboutUs" href="img/AboutUs.html">About us&emsp;&emsp;|</a>
-                <a class="contact" href="img/ContactUs.html">Contact Us</a>
-                <ul class="sosmed">
-                    <li>
-                        Follow us on :<br>
-                        <a class="instagram" href="instagram.com/BeautyEastJava"><img src="img/instagram.png" alt=""></a>
-                        <a class="facebook" href="facebook.com/BeautyEastJava"><img src="img/facebook.png" alt=""></a>
-                        <a class="twitter" href="twitter.com/BeautyEastJava"><img src="img/twitter.png" alt=""></a>
-                        <a class="youtube" href="youtube.com/BeautyEastJava"><img src="img/youtube.png" alt=""></a>
-                    </li>
-                </ul>
-            </li>
-        </ul><br>
-        <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
+        </li>
     </div>
+    <div class="filter">
+        <li><a href="#"><img src="img/filter.png"></a></button>
+            <ul>
+                <li><a href="#">Tempat Terdekat</a></li>
+                <li><a href="#">Tanggal Terdekat</a></li>
+            </ul>
+        </li>
+    </div>
+    <div class="gambar">
+        <table border="0">
+            <tr>
+                <td><img src="img/EMajapahit.jpg"></td>
+                <td><img src="img/EJFC.jpg"></td>
+                <td><img src="img/EBromo.jpg"></td>
+                <td><img src="img/EFlower.jpg"></td>
+            </tr>
+            <tr>
+                <td>Majapahit International Travel Tour</td>
+                <td>Jember Fashion Carnaval</td>
+                <td>Yahya Kasada dan Eksotika Bromo</td>
+                <td>Flower Fashion Carnaval</td>
+            </tr>
+            <tr>
+                <td><img src="img/ETour.jpg"></td>
+                <td><img src="img/EEthno.jpg"></td>
+                <td><img src="img/EGandrung.jpg"></td>
+                <td><img src="img/EJSN.jpg"></td>
+            </tr>
+            <tr>
+                <td>International Tour de Banyuwangi Ijen</td>
+                <td>Banyuwangi Ethno Carnaval</td>
+                <td>Festival Gandrung Sewu</td>
+                <td>Jatim Spectacular Night</td>
+            </tr>
+        </table>
+    </div>
+</div><br><br><br>
+<div class="footer">
+    <ul class="footer-menu">
+        <li>
+            <a class="cookie" href="img/CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
+            <a class="aboutUs" href="img/AboutUs.html">About us&emsp;&emsp;|</a>
+            <a class="contact" href="img/ContactUs.html">Contact Us</a>
+            <ul class="sosmed">
+                <li>
+                    Follow us on :<br>
+                    <a class="instagram" href="instagram.com/BeautyEastJava"><img src="img/instagram.png" alt=""></a>
+                    <a class="facebook" href="facebook.com/BeautyEastJava"><img src="img/facebook.png" alt=""></a>
+                    <a class="twitter" href="twitter.com/BeautyEastJava"><img src="img/twitter.png" alt=""></a>
+                    <a class="youtube" href="youtube.com/BeautyEastJava"><img src="img/youtube.png" alt=""></a>
+                </li>
+            </ul>
+        </li>
+    </ul><br>
+    <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
+</div>
 </body>
 </html>
