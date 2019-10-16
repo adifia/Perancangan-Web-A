@@ -7,7 +7,7 @@
     <title>Goes to Wisata</title>
     <link rel="icon" href="img/Ikon.ico">
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
         }
@@ -37,7 +37,12 @@
         .akun a{
             text-decoration: none;
             color: white;
-            font-size: 30px;
+            font-size: 15px;
+        }
+        .akun img {
+            width: 40px;
+            height: 40px;
+            margin-top: -12px;
         }
 
         /*CONTENT*/
@@ -111,7 +116,7 @@
         .cari {
             background: #B3FF9E;
             width: 200px;
-            height: 500px;
+            height: 700px;
             padding-right: 40px;/*search*/
             position: fixed;
             z-index: 100; /*biar selalu di atas*/
@@ -119,6 +124,7 @@
             left: -200px; /*kedalaman*/
             transition: 0.3s;
             color: black;
+            margin-top: 0px;
         }
         .cari:hover {
            transform: translate(150px, 0);
@@ -260,7 +266,7 @@
             <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+            <button type="button"> <img src="img/Akun.png" alt="profile"><br><a href="Akun.html"><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
         </div>
         <div class="utama">
             <button type="button"><a href="event.html"><font face="Freestyle script"; font size="6px">Let's See an Event</font></a></button>
@@ -268,14 +274,6 @@
         </div>
     </div>
     <div class="content">
-        <div class="namaKota">
-            <li class="a">
-                <font face="Shalinta">Explore</font>
-            </li>
-            <li class="b">
-                <font face="Freestyle script">Malang</font>
-            </li>
-        </div>
         <div class="cari">
             <div class="title">SEARCH</div>
             <div class="cariKota">
@@ -316,6 +314,15 @@
                 <li><a href="#">Tulungagung</a></li>
             </ul>
         </div>
+        <div class="namaKota">
+            <li class="a">
+                <font face="Shalinta">Explore</font>
+            </li>
+            <li class="b">
+                <font face="Freestyle script">Malang</font>
+            </li>
+        </div>
+
         <div class="filter">
             <li><a href="#"><img src="img/filter.png"></a></button>
                 <ul>
