@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Proof of Payment</title>
+    <title>Payment Details</title>
     <link rel="icon" href="img/Ikon.ico">
     <style>
         *{
@@ -105,41 +105,55 @@
         }
 
         /*Detail Pembayaran*/
+/*        .detail table{
+            border: dashed 6px midnightblue;
+        }*/
+
         .detail table {
             margin-top: 30px;
-            width: 85%;
+            width: 50%;
             height: 10px;
-            margin-left: 90px;
+            margin-left: 50px;
             padding : 30px;
             font-size: 25px;
             float: left;
             background-color: white;
-            position: center;
             border: dashed 6px midnightblue;
         } 
+        .bank table {
+            float: right;
+            width: 30%;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-right: 80px;
+            font-size: 17px;
+            padding: 30px;
+            background-color: white;
+            border-color: #00008B;
+            /*border-style: solid;*/
+        }
 
-        #print {
-            margin-top: 370px;
+        .bank img {
+            /*width: 50px;*/
+            height: 30px;
+        }
+
+        #pay {
+            margin-top: 280px;
             background-color: blue;
             color: white;
             padding: 10px;
-            width: 90px;
+            width: 100px;
             border-radius: 8px;
             font-weight: bold;
-            margin-left: -50px;
+            margin-left: -80px;
             font-size: 17px;
             margin-bottom: 50px;
             color: black;
         }
-        #print:hover {
+        #pay:hover {
             background-color: #7FFF00;
             color: #FFF;
-        }
-        .qr {
-            width: 15%;
-            margin-left: -250px;
-            margin-bottom: 100px;
-
         }
 
         /*FOOTER*/
@@ -151,7 +165,7 @@
             height: 90px;
             font-family: Calibri;
             font-size: 15px;
-            /*bottom: 0px;*/
+            bottom: 0px;
         }
         .footer .footer-menu{
             margin-top: 20px; 
@@ -190,6 +204,38 @@
             height: 40px;
             margin-top: -20px;
         }
+        .content2 li{
+            position: absolute;
+            list-style: none;
+        }
+        .identitas{
+            left: 70px;
+            list-style: none;
+            padding: 5% 8% 10% 5%;
+            background-color: white;
+            border: dotted 10px gray;
+            z-index: 1
+        }
+        .identitas td input{
+            width: 90%;
+        }
+        table tr td img{
+            width: 70px;
+            height: 70px;
+        }
+        .travel{
+            top: 150px;
+            right: 70px;
+            background-color: white;
+            border: dashed 6px midnightblue;
+            padding: 5% 8% 10% 15%;
+        }
+        .travel tr{
+            text-align: center;
+        }
+        .travel td{
+            width: 90px;
+        }
     </style>
 </head>
 <body>
@@ -203,59 +249,63 @@
     </div>
     <div class="content">
         <div class="judul">
-            <font face="Freestyle Script">Proof of Payment</font>
+            <font face="Freestyle Script">Booking</font>
         </li>
     </div>
 
     <div class="detail">
-        <table border="0">
-<!--             <tr>
-                <td class="judul">Detail Pembayaran</td>
-            </tr> -->
-            <tr>
-                <td width="50%">Nama Turis</td>
-                <td>:</td>
-                <td>Mr.Traveler</td>
-            </tr>
-            <tr>
-                <td>Nama Wisata/Event</td>
-                <td>:</td>
-                <td>Jatim Park</td>
-            </tr>
-            <tr>
-                <td>Tanggal Kunjungan</td>
-                <td>:</td>
-                <td>20/10/2019</td>
-            </tr>
-            <tr>
-                <td>Total Pembayaran</td>
-            </tr>
-            <tr>
-                <td>Harga Tiket</td>
-                <td>:</td>
-                <td>Rp. 80.000</td>
-            </tr>
-            <tr>
-                <td>Booking Travel</td>
-                <td>:</td>
-                <td>Rp. 60.000</td>
-            </tr>
-            <tr>
-                <td>JUMLAH</td>
-                <td>:</td>
-                <td>Rp. 200.000</td>
-            </tr>
-            <tr>
-                <td>Status Pembayaran</td>
-                <td>:</td>
-                <td>Belum Dibayar</td>
-            </tr>
-        </table>
+         <li class="identitas">
+                <table width="500px" border="0">
+                    <tr>
+                        <td>Nama Pembooking</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Wisata</td>
+                        <td><input type="text" name="jenis"></td>
+                    </tr>
+                    <tr>
+                        <td>Harga Tiket</td>
+                        <td><input type="text" name="harga"></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Orang</td>
+                        <td><input type="number" name="jumlah"></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal keberangkatan</td>
+                        <td><input type="date" name="tanggal"></td>
+                    </tr>
+                </table>
+        </li>
+        <li class="travel">
+            <table>
+                <tr>
+                    <td colspan="3">Booking Travel</td>
+                </tr>
+                <tr>
+                    <td><a href="Pegipegi.com"><img src="img/BPegi.jpg"></a></td>
+                    <td><a href="Traveloka.com"><img src="img/Btraveloka.jpg"></a></td>
+                    <td><a href="Tiket.com"><img src="img/BTiket.png"></a></td>
+                </tr>
+            </table>
+            <table width="300px">
+                <tr>
+                    <td colspan="3">Apakah kamu membutuhkan Tour Guide?</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="TG" value="ya">Ya</td>
+                    <td><input type="radio" name="TG" value="tidak">Tidak</td>
+                </tr>
+            </table>
+        </li>
+        <li class="tombol">
+            <li id="pesan"><a href="pembayaran.html"><button type="button">Check Out</button></a></li>
+        </li>
     </div>
 
-    <img class="qr" src="img/qr.png" alt="qrcode">
 
-    <a href="index.html"><button id="print">Pay</button></a>
+    <a href="bukti.html"><button id="pay">Check Out</button></a>
     <div class="footer">
         <ul class="footer-menu">
             <li>
