@@ -11,6 +11,34 @@
         margin: 0px;
         padding: 0px;
         }
+        /*HEADER*/
+        .logo{
+            float: left;
+            width: 170px;
+        }
+        .logo img{
+            align:left;
+            height: 90px;
+            width: 170px;
+        }
+        .header{
+            background-color: #012F52;
+            height: 90px;
+            width: 100%;
+        }
+        .akun button{
+            float: right;
+            background-color: transparent;
+            border: none;
+            margin-top: 40px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .akun a{
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+        }
         /*CONTENT*/
         body{
             background-color: mediumturquoise;
@@ -26,6 +54,7 @@
             list-style: none;
         }
         .identitas{
+            top: 150px;
             left: 70px;
             list-style: none;
             padding: 5% 8% 10% 5%;
@@ -41,7 +70,7 @@
             height: 70px;
         }
         .travel{
-            top: 150px;
+            top: 200px;
             right: 70px;
             background-color: white;
             border: dashed 6px midnightblue;
@@ -56,13 +85,14 @@
         #pesan{
             z-index: 1;
             right: 100px;
-            top: 450px;
+            top: 500px;
         }
         #pesan button{
             padding: 5px 15px 5px 15px;
             background-color: #7FFF00;
             border: none;
             font-size: 15px;
+            font-weight: bold;
         }
         #pesan button:hover{
             background-color: turquoise;
@@ -79,33 +109,38 @@
     </style>
 </head>
 <body>
-    <div id="logo">
-        <img src="img/Logo.png">
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.png"></a>
+        </div>
+        <div class="akun">
+            <button type="button"><a href="Akun.html"><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+        </div>
     </div>
     <div class="content">
         <li class="identitas">
-                <table width="500px" border="0">
-                    <tr>
-                        <td>Nama Pembooking</td>
-                        <td><input type="text" name="nama"></td>
-                    </tr>
-                    <tr>
-                        <td>Nama Wisata</td>
-                        <td><input type="text" name="jenis"></td>
-                    </tr>
-                    <tr>
-                        <td>Harga Tiket</td>
-                        <td><input type="text" name="harga"></td>
-                    </tr>
-                    <tr>
-                        <td>Jumlah Orang</td>
-                        <td><input type="number" name="jumlah"</td>
-                    </tr>
-                    <tr>
-                        <td>Tanggal keberangkatan</td>
-                        <td><input type="date" name="tanggal"></td>
-                    </tr>
-                </table>
+            <table width="500px" border="0">
+                <tr>
+                    <td>Nama Pembooking</td>
+                    <td><input type="text" name="nama"></td>
+                </tr>
+                <tr>
+                    <td>Nama Wisata</td>
+                    <td><input type="text" name="jenis"></td>
+                </tr>
+                <tr>
+                    <td>Harga Tiket</td>
+                    <td><input type="text" name="harga"></td>
+                </tr>
+                <tr>
+                    <td>Jumlah Orang</td>
+                    <td><input type="number" name="jumlah"</td>
+                </tr>
+                <tr>
+                    <td>Tanggal keberangkatan</td>
+                    <td><input type="date" name="tanggal"></td>
+                </tr>
+            </table>
         </li>
         <li class="travel">
             <table>
@@ -129,7 +164,7 @@
             </table>
         </li>
         <li class="tombol">
-            <li id="pesan"><a href="PembayaranD.html"><button type="button">Check Out</button></a></li>
+            <li id="pesan"><a href="Pembayaran.html"><button type="button">Check Out</button></a></li>
         </li>
     </div>
 </body>
