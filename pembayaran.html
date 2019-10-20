@@ -15,6 +15,12 @@
             background-color: mediumturquoise;
         }
         /*HEADER*/
+        .header{
+            background-color: #012F52;
+            height: 90px;
+            width: 100%;
+        }
+        /*LOGO*/
         .logo{
             float: left;
             width: 170px;
@@ -24,136 +30,102 @@
             height: 90px;
             width: 170px;
         }
-        .header{
-            background-color: #012F52;
-            height: 90px;
-            width: 100%;
-        }
+        /*AKUN*/
         .akun button{
             float: right;
             background-color: transparent;
             border: none;
-            margin-top: 40px;
+            margin-top: 20px;
             margin-right: 20px;
             cursor: pointer;
         }
         .akun a{
             text-decoration: none;
             color: white;
-            font-size: 30px;
+            font-size: 20px;
         }
-
-        /*CONTENT*/
+        .akun img{
+            width: 35px;
+            height: 35px;
+        }
+        /*JUDUL*/
         .judul{
-            list-style: none;
             margin-top: 20px;
-            margin-left :550px;
+            margin-left :45%;
         }
         .judul font{
-            background-color: #2F8758;
-            padding: 2px 15px 2px 15px;
+            background-color: transparent;
+            padding: 7px 60px 7px 60px;
             text-align: center;
-            position: relative;
-            font-size: 40px;
-            color: white;
-        }    
-        .filter{
-            list-style: none;
-            margin-left: 1100px;
-        }
-        .filter li{
-            width: 50px;
-        }
-        .filter li img{
-            width: 25px;
-            height: 25px;
-            background-color: paleturquoise;
-            padding: 7px;
-        }
-        .filter li a{
-            text-decoration: none; /*biar gak ada garis bawahnya*/
-        }
-        .filter ul {
-            list-style: none;
-        }
-        .filter li a { /*English-UK*/
-            display: block; /*kalo gak ada, jadi ke kanan*/
-        }
-        .filter li:hover ul { /*muncul pilihan bahasa*/
-            display:block;
-        }
-        .filter ul { /*pilihan bahasa*/
-            display:none; /*biar gak kelihatan sebelum di tunjuk*/
-            position:absolute;
-            border : 2px solid paleturquoise;
-        }
-        .filter ul:hover li { /*hover pilihan filter*/
-            border-color: paleturquoise;
-        }
-        .filter ul li a { /*kotak pilihan filter*/
-            display:block;
-            padding-left: 10px;
-            text-align:left;
-            width:150px;
-            height:20px;
+            font-size: 45px;
             color: black;
-            font-family: calibri;
-            background-color: white;
-        }
-        .filter ul li a:hover{
-            background-color: paleturquoise;
-        }
-
-        /*Detail Pembayaran*/
-/*        .detail table{
-            border: dashed 6px midnightblue;
-        }*/
-
-        .detail table {
-            margin-top: 30px;
-            width: 50%;
-            height: 10px;
-            margin-left: 50px;
-            padding : 30px;
-            font-size: 25px;
-            float: left;
-            background-color: white;
-            border: dashed 6px midnightblue;
-        } 
-        .bank table {
-            float: right;
-            width: 30%;
-            margin-left: 50px;
-            margin-top: 30px;
-            margin-right: 80px;
-            font-size: 17px;
-            padding: 30px;
-            background-color: white;
-            border-color: #00008B;
-            /*border-style: solid;*/
-        }
-
-        .bank img {
-            /*width: 50px;*/
-            height: 30px;
-        }
-
-        #pay {
-            margin-top: 280px;
-            background-color: blue;
-            color: white;
-            padding: 10px;
-            width: 100px;
-            border-radius: 8px;
             font-weight: bold;
-            margin-left: -80px;
-            font-size: 17px;
-            margin-bottom: 50px;
-            color: black;
+            border-bottom: 5px double white;
         }
-        #pay:hover {
+        /*CONTENT*/
+        .content li{
+            font-size: 18px;
+            position: absolute;
+            list-style: none;
+            font-family: calibri;
+        }
+        /* DETAIL */
+        .detail{
+            z-index: 1;
+            top: 200px;
+            left: 100px;
+            list-style: none;
+            padding: 5% 10% 7% 5%;
+            background-color: white;
+            border: dashed 6px midnightblue;
+        }
+        .detail td{
+            width: 200px;
+        }
+        #jumlah{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        /* BANK */
+        .bank{
+            top: 250px;
+            right: 80px;
+            background-color: white;
+            border: dotted 6px gray;
+            padding: 5% 5% 10% 8%;
+        }
+        .bank td{
+            width: 150px;
+        }
+        .bank img{
+            height: 26px;
+        }
+        /* BAYAR */
+        #bayar{
+            z-index: 2;
+            right: 550px;
+            top: 500px;
+        }
+        #bayar button{
+            padding: 7px 25px 7px 25px;
+            background-color: midnightblue;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #bayar button:hover{
             background-color: #7FFF00;
-            color: #FFF;
+            color: black;
+            cursor: pointer;
+        }
+        @media (max-width:1210px){
+            .bank{
+                top: 400px;
+            }
+            #bayar{
+                top: 700px;
+            }
         }
 
         /*FOOTER*/
@@ -194,16 +166,6 @@
             margin-left: 600px;
             color: black;
         }
-        .akun a{
-            text-decoration: none;
-            color: white;
-            font-size: 15px;
-        }
-        .akun img {
-            width: 40px;
-            height: 40px;
-            margin-top: -20px;
-        }
     </style>
 </head>
 <body>
@@ -212,78 +174,62 @@
             <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><img src="img/Akun.png" alt="profile"><br><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+            <button type="button"><a href="Akun.html"><img src="img/user_akun.png" alt="profile"><br><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
         </div>
     </div>
+    <div class="judul"><font face="Freestyle script">Payment Details</font></div>
     <div class="content">
-        <div class="judul">
-            <font face="Freestyle Script">Payment Details</font>
+        <li class="detail">
+            <table>
+                <tr>
+                    <td>Harga Tiket</td>
+                    <td>: Rp 1.200.000</td>
+                </tr>
+                <tr>
+                    <td>Harga Travel</td>
+                    <td>: Rp 1.200.000</td>
+                </tr>
+                <tr>
+                    <td>Sewa Tour Guide</td>
+                    <td>: -</td>
+                </tr>
+            </table><br>
+            <table id="jumlah">
+                <tr>
+                    <td>JUMLAH</td>
+                    <td>: Rp 2.400.000</td>
+                </tr>
+            </table>
         </li>
+        <li class="bank">
+            <table border="0">
+                <tr>
+                    <td class="judul" width="35%">Pilihan Bank</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="bank"> <img src="img/bni.png" alt="BNI"></td>
+                    <td>Bank BNI</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="bank"> <img src="img/mandiri.png" alt="Mandiri"></td>
+                    <td>Bank Mandiri</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="bank"> <img src="img/bri.png" alt="BRI"></td>
+                    <td>Bank BRI</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="bank"> <img src="img/bca.png" alt="BCA"></td>
+                    <td>Bank BCA</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="bank"> <img src="img/btn.png" alt="BTN"></td>
+                    <td>Bank BTN</td>
+                </tr>
+            </table>      
+        </li>
+        <li id="bayar"><a href="bukti.html"><button type="button">Pay</button></a></li>
     </div>
-
-    <div class="detail">
-        <table border="0">
-            <tr>
-                <td class="judul">Detail Pembayaran</td>
-            </tr>
-            <tr>
-                <td width="50%">Nama Turis</td>
-                <td>:</td>
-                <td>Mr.Traveler</td>
-            </tr>
-            <tr>
-                <td>Nama Wisata/Event</td>
-                <td>:</td>
-                <td>Jatim Park</td>
-            </tr>
-            <tr>
-                <td>Harga Tiket</td>
-                <td>:</td>
-                <td>Rp. 80.000</td>
-            </tr>
-            <tr>
-                <td>Jumlah Orang</td>
-                <td>:</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Tanggal Kunjungan</td>
-                <td>:</td>
-                <td>20/10/2019</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="bank">
-        <table border="0">
-            <tr>
-                <td class="judul" width="35%">Pilihan Bank</td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="bank"> <img src="img/bni.png" alt="BNI"></td>
-                <td>Bank BNI</td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="bank"> <img src="img/mandiri.png" alt="Mandiri"></td>
-                <td>Bank Mandiri</td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="bank"> <img src="img/bri.png" alt="BRI"></td>
-                <td>Bank BRI</td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="bank"> <img src="img/bca.png" alt="BCA"></td>
-                <td>Bank BCA</td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="bank"> <img src="img/btn.png" alt="BTN"></td>
-                <td>Bank BTN</td>
-            </tr>
-        </table>      
-    </div>
-    <br><br>
-
-    <a href="bukti.html"><button id="pay">Pay</button></a>
     <div class="footer">
         <ul class="footer-menu">
             <li>

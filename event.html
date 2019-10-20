@@ -12,6 +12,11 @@
             padding: 0px;
         }
         /*HEADER*/
+        .header{
+            background-color: #012F52;
+            height: 90px;
+            width: 100%;
+        }
         .logo{
             float: left;
             width: 170px;
@@ -21,30 +26,36 @@
             height: 90px;
             width: 170px;
         }
-        .header{
-            background-color: #012F52;
-            height: 90px;
-            width: 100%;
-        }
-        .akun button{
+        .utama button{
+            background-color:#2F8758;
+            color: white;
             float: right;
-            background-color: transparent;
+            padding: 3px 55px 3px 55px;
             border: none;
             margin-top: 40px;
-            margin-right: 20px;
+            margin-right: 5px;
+            cursor:pointer;
+        }
+        .utama a{
+            text-decoration: none;
+        }
+        .utama button:hover{
+            background-color: white;     
+            color:#2F8758;
+        }
+        .gambar img:hover {
+            transform: scale(1.3);
+        }
+        /*AKUN*/
+        .akun img{
+            height: 40px;
+            width: 40px;
+            float: right;
+            margin-top: 40px;
+            margin-right: 10px;
+            margin-left: 5px;
             cursor: pointer;
         }
-        .akun a{
-            text-decoration: none;
-            color: white;
-            font-size: 15px;
-        }
-        .akun img {
-            width: 40px;
-            height: 40px;
-            margin-top: -12px;
-        }
-
         /*CONTENT*/
         .judul{
             list-style: none;
@@ -158,30 +169,6 @@
             margin-left: 600px;
             color: black;
         }
-        .utama button{
-            background-color:#2F8758;
-            float: right;
-            padding: 3px 55px 3px 55px;
-            border: none;
-            margin-top: 40px;
-            margin-right: 5px;
-            cursor:pointer;
-        }
-
-        .utama a{
-            text-decoration: none;
-            color: white;
-        }
-        .utama button:hover{
-            background-color: white;     
-            color:#2F8758;
-        }
-        .utama a:hover{
-            color:#2F8758;
-        }
-        .gambar img:hover {
-            transform: scale(1.3);
-        }
     </style>
 </head>
 <body>
@@ -190,11 +177,11 @@
             <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><img src="img/Akun.png" alt="profile"><br><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+            <a href="akun.html"><img src="img/user_akun.png" alt="profile"></button></a>
         </div>
         <div class="utama">
-            <button type="button"><a href="event.html"><font face="Freestyle script"; font size="6px">Let's See an Event</font></a></button>
-            <button type="button"><a href="wisata.html"><font face="Freestyle script"; font size="6px">Goes to Wisata</font></a></button>
+            <a href="event.html"><button type="button"><font face="Freestyle script"; font size="6px">Let's See an Event</font></button></a>
+            <a href="wisata.html"><button type="button"><font face="Freestyle script"; font size="6px">Goes to Wisata</font></button></a>
         </div>
     </div>
     <div class="content">
@@ -213,10 +200,10 @@
     <div class="gambar">
         <table border="0">
             <tr>
-                <td><img src="img/EMajapahit.jpg"></td>
-                <td><img src="img/EJFC.jpg"></td>
-                <td><img src="img/EBromo.jpg"></td>
-                <td><img src="img/EFlower.jpg"></td>
+                <td><a href="Majapahit.html"><img src="img/EMajapahit.jpg"></a></td>
+                <td><a href="JFC.html"><img src="img/EJFC.jpg"></a></td>
+                <td><a href="Bromo.html"><img src="img/EBromo.jpg"></a></td>
+                <td><a href="Flower.html"><img src="img/EFlower.jpg"></a></td>
             </tr>
             <tr>
                 <td>Majapahit International Travel Tour</td>
@@ -225,10 +212,10 @@
                 <td>Flower Fashion Carnaval</td>
             </tr>
             <tr>
-                <td><img src="img/ETour.jpg"></td>
-                <td><img src="img/EEthno.jpg"></td>
-                <td><img src="img/EGandrung.jpg"></td>
-                <td><img src="img/EJSN.jpg"></td>
+                <td><a href="Tour.html"><img src="img/ETour.jpg"></a></td>
+                <td><a href="Ethno.html"><img src="img/EEthno.jpg"></a></td>
+                <td><a href="Gandrung.html"><img src="img/EGandrung.jpg"></a></td>
+                <td><a href="JSN.html"><img src="img/EJSN.jpg"></a></td>
             </tr>
             <tr>
                 <td>International Tour de Banyuwangi Ijen</td>

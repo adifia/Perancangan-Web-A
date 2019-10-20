@@ -15,6 +15,12 @@
             background-color: mediumturquoise;
         }
         /*HEADER*/
+        .header{
+            background-color: #012F52;
+            height: 90px;
+            width: 100%;
+        }
+        /*LOGO*/
         .logo{
             float: left;
             width: 170px;
@@ -24,124 +30,98 @@
             height: 90px;
             width: 170px;
         }
-        .header{
-            background-color: #012F52;
-            height: 90px;
-            width: 100%;
-        }
+        /*AKUN*/
         .akun button{
             float: right;
             background-color: transparent;
             border: none;
-            margin-top: 40px;
+            margin-top: 20px;
             margin-right: 20px;
             cursor: pointer;
         }
         .akun a{
             text-decoration: none;
             color: white;
-            font-size: 30px;
+            font-size: 20px;
         }
-
-        /*CONTENT*/
+        .akun img{
+            width: 35px;
+            height: 35px;
+        }
+        /*JUDUL*/
         .judul{
-            list-style: none;
             margin-top: 20px;
-            margin-left :550px;
+            margin-left :40%;
         }
         .judul font{
-            background-color: #2F8758;
-            padding: 2px 15px 2px 15px;
+            background-color: transparent;
+            padding: 7px 60px 7px 60px;
             text-align: center;
-            position: relative;
-            font-size: 40px;
-            color: white;
-        }    
-        .filter{
-            list-style: none;
-            margin-left: 1100px;
-        }
-        .filter li{
-            width: 50px;
-        }
-        .filter li img{
-            width: 25px;
-            height: 25px;
-            background-color: paleturquoise;
-            padding: 7px;
-        }
-        .filter li a{
-            text-decoration: none; /*biar gak ada garis bawahnya*/
-        }
-        .filter ul {
-            list-style: none;
-        }
-        .filter li a { /*English-UK*/
-            display: block; /*kalo gak ada, jadi ke kanan*/
-        }
-        .filter li:hover ul { /*muncul pilihan bahasa*/
-            display:block;
-        }
-        .filter ul { /*pilihan bahasa*/
-            display:none; /*biar gak kelihatan sebelum di tunjuk*/
-            position:absolute;
-            border : 2px solid paleturquoise;
-        }
-        .filter ul:hover li { /*hover pilihan filter*/
-            border-color: paleturquoise;
-        }
-        .filter ul li a { /*kotak pilihan filter*/
-            display:block;
-            padding-left: 10px;
-            text-align:left;
-            width:150px;
-            height:20px;
+            font-size: 45px;
             color: black;
-            font-family: calibri;
-            background-color: white;
-        }
-        .filter ul li a:hover{
-            background-color: paleturquoise;
-        }
-
-        /*Detail Pembayaran*/
-        .detail table {
-            margin-top: 30px;
-            width: 85%;
-            height: 10px;
-            margin-left: 90px;
-            padding : 30px;
-            font-size: 25px;
-            float: left;
-            background-color: white;
-            position: center;
-            border: dashed 6px midnightblue;
-        } 
-
-        #print {
-            margin-top: 370px;
-            background-color: blue;
-            color: white;
-            padding: 10px;
-            width: 90px;
-            border-radius: 8px;
             font-weight: bold;
-            margin-left: -50px;
-            font-size: 17px;
-            margin-bottom: 50px;
+            border-bottom: 5px double white;
+        }
+        /*CONTENT*/
+        .content li{
+            list-style: none;
+            position: relative;
+            font-family: Calibri;
+            font-size: 18px;
+        }
+        .detail{
+            width: 60%;
+            z-index: 1;
+            top: 50px;
+            left: 210px;
+            padding: 5% 5% 7% 5%;
+            background-color: white;
+            border: 6px solid midnightblue;
+        }
+        .detail td{
+            width: 200px;
+        }
+        #jumlah{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        /*LOGO-BUKTI*/
+        #logo-bukti{
+            z-index: 5;
+            left: 1000px;
+            bottom: 450px;
+        }
+        #logo-bukti img{
+            width: 150px;
+            height: 80px;
+        }
+        /*BARCODE*/
+        #barcode{
+            z-index: 5;
+            left: 800px;
+            bottom: 400px;
+        }
+        #barcode img{
+            width: 14%
+        }
+        /*DONE*/
+        #done{
+            left: 1050px;
+            bottom: 220px;
+        }
+        #done button{
+            background-color: midnightblue;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 7px 25px 7px 25px;
+            border: none;
+            cursor: pointer;
+        }
+        #done button:hover{
+            background-color:#7FFF00;
             color: black;
         }
-        #print:hover {
-            background-color: #7FFF00;
-            color: #FFF;
-        }
-        .qr {
-            width: 15%;
-            margin-left: -250px;
-            margin-bottom: 100px;
-
-        }
-
         /*FOOTER*/
         .footer{
             position: absolute;
@@ -151,7 +131,6 @@
             height: 90px;
             font-family: Calibri;
             font-size: 15px;
-            /*bottom: 0px;*/
         }
         .footer .footer-menu{
             margin-top: 20px; 
@@ -180,16 +159,6 @@
             margin-left: 600px;
             color: black;
         }
-        .akun a{
-            text-decoration: none;
-            color: white;
-            font-size: 15px;
-        }
-        .akun img {
-            width: 40px;
-            height: 40px;
-            margin-top: -20px;
-        }
     </style>
 </head>
 <body>
@@ -198,64 +167,72 @@
             <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><img src="img/Akun.png" alt="profile"><br><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+            <button type="button"><a href="Akun.html"><img src="img/user_akun.png" alt="profile"><br><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
         </div>
     </div>
+    <div class="judul"><font face="Freestyle script">Proof of Payment</font></div>
     <div class="content">
-        <div class="judul">
-            <font face="Freestyle Script">Proof of Payment</font>
+        <li class="detail">
+            <table>
+                <tr>
+                    <td>Nama Turis</td>
+                    <td>: Mr.Traveler</td>
+                </tr>
+                <tr>
+                    <td>Nama Wisata/Event</td>
+                    <td>: Jatim Park</td>
+                </tr>
+                <tr>
+                    <td>Jumlah Orang</td>
+                    <td>: 6</td>
+                </tr>
+                <tr>
+                    <td>Tanggal Kunjungan</td>
+                    <td>: 20/10/2019</td>
+                </tr>
+                <tr>
+                    <td>Nama Travel</td>
+                    <td>: Pesona Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Nama Tour Guide</td>
+                    <td>: -</td>
+                </tr>
+            </table><br>
+            <table>
+                <tr>
+                    <td id="rincian">Rincian Pembayaran</td>
+                </tr>
+                <tr>
+                    <td>Harga Tiket</td>
+                    <td>: Rp 1.200.000</td>
+                </tr>
+                <tr>
+                    <td>Harga Travel</td>
+                    <td>: Rp 1.200.000</td>
+                </tr>
+                <tr>
+                    <td>Sewa Tour Guide</td>
+                    <td>: -</td>
+                </tr>
+            </table><br>
+            <table id="jumlah">
+                <tr>
+                    <td>JUMLAH</td>
+                    <td>: Rp 2.400.000</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Status Pembayaran</td>
+                    <td>: Belum Lunas</td>
+                </tr>
+            </table>
         </li>
+        <li id="logo-bukti"><img src="img/logo.png"></li>
+        <li id="barcode"><img src="img/qr.png"></li>
+        <li id="done"><a href="index.html"><button type="button">Done</button></a></li>
     </div>
-
-    <div class="detail">
-        <table border="0">
-<!--             <tr>
-                <td class="judul">Detail Pembayaran</td>
-            </tr> -->
-            <tr>
-                <td width="50%">Nama Turis</td>
-                <td>:</td>
-                <td>Mr.Traveler</td>
-            </tr>
-            <tr>
-                <td>Nama Wisata/Event</td>
-                <td>:</td>
-                <td>Jatim Park</td>
-            </tr>
-            <tr>
-                <td>Tanggal Kunjungan</td>
-                <td>:</td>
-                <td>20/10/2019</td>
-            </tr>
-            <tr>
-                <td>Total Pembayaran</td>
-            </tr>
-            <tr>
-                <td>Harga Tiket</td>
-                <td>:</td>
-                <td>Rp. 80.000</td>
-            </tr>
-            <tr>
-                <td>Booking Travel</td>
-                <td>:</td>
-                <td>Rp. 60.000</td>
-            </tr>
-            <tr>
-                <td>JUMLAH</td>
-                <td>:</td>
-                <td>Rp. 200.000</td>
-            </tr>
-            <tr>
-                <td>Status Pembayaran</td>
-                <td>:</td>
-                <td>Belum Dibayar</td>
-            </tr>
-        </table>
-    </div>
-
-    <img class="qr" src="img/qr.png" alt="qrcode">
-
-    <a href="index.html"><button id="print">Pay</button></a>
     <div class="footer">
         <ul class="footer-menu">
             <li>

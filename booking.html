@@ -26,18 +26,23 @@
             height: 90px;
             width: 100%;
         }
+        /*AKUN*/
         .akun button{
             float: right;
             background-color: transparent;
             border: none;
-            margin-top: 40px;
+            margin-top: 20px;
             margin-right: 20px;
             cursor: pointer;
         }
         .akun a{
             text-decoration: none;
             color: white;
-            font-size: 30px;
+            font-size: 20px;
+        }
+        .akun img{
+            width: 35px;
+            height: 35px;
         }
         /*CONTENT*/
         body{
@@ -50,6 +55,7 @@
             margin-left: 45%;
         }
         .content li{
+            font-size: 18px;
             position: absolute;
             list-style: none;
         }
@@ -74,7 +80,7 @@
             right: 70px;
             background-color: white;
             border: dashed 6px midnightblue;
-            padding: 5% 8% 10% 15%;
+            padding: 5% 8% 8% 15%;
         }
         .travel tr{
             text-align: center;
@@ -89,13 +95,13 @@
         }
         #pesan button{
             padding: 5px 15px 5px 15px;
-            background-color: #7FFF00;
+            background-color: turquoise;
             border: none;
             font-size: 15px;
             font-weight: bold;
         }
         #pesan button:hover{
-            background-color: turquoise;
+            background-color: #7FFF00;
             cursor: pointer;
         }
         @media (max-width:1210px){
@@ -106,6 +112,43 @@
                 top: 700px;
             }
         }
+        /*FOOTER*/
+        .footer{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            background-color: #B3FF9E;
+            height: 90px;
+            font-family: Calibri;
+            font-size: 15px;
+        }
+        .footer .footer-menu{
+            margin-top: 20px; 
+        }
+        .footer .footer-menu li a{
+            text-decoration: none;
+            margin-left: 30px;
+            color: black;
+        }
+        .footer .footer-menu li a:hover{
+            color:#012F52;
+        }
+        .sosmed{
+            text-align: center;
+            list-style: none;
+            float: right;
+            margin-right: 30px;
+            color: black;
+        }
+        .sosmed img{
+            width: 25px;
+            height: 25px;
+        }
+        .footer h5{
+            text-align: left;
+            margin-left: 45%;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -114,31 +157,27 @@
             <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="Akun.html"><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
+            <button type="button"><a href="Akun.html"><img src="img/user_akun.png" alt="profile"><br><font face="Freestyle script">Hi, Mr.Travel!</a></font></button>
         </div>
     </div>
     <div class="content">
-        <li class="identitas">
+        <li class="identitas" onsubmit="validateIdentitas()">
             <table width="500px" border="0">
                 <tr>
                     <td>Nama Pembooking</td>
-                    <td><input type="text" name="nama"></td>
+                    <td>: Mr.Travel</td>
                 </tr>
                 <tr>
                     <td>Nama Wisata</td>
-                    <td><input type="text" name="jenis"></td>
-                </tr>
-                <tr>
-                    <td>Harga Tiket</td>
-                    <td><input type="text" name="harga"></td>
+                    <td>: Jatim Park 3</td>
                 </tr>
                 <tr>
                     <td>Jumlah Orang</td>
-                    <td><input type="number" name="jumlah"</td>
+                    <td><input type="number" id="jumlah"</td>
                 </tr>
                 <tr>
-                    <td>Tanggal keberangkatan</td>
-                    <td><input type="date" name="tanggal"></td>
+                    <td>Tanggal Kunjungan</td>
+                    <td><input type="date" id="tanggal"></td>
                 </tr>
             </table>
         </li>
@@ -168,5 +207,36 @@
 
         </li>
     </div>
+    <div class="footer">
+            <ul class="footer-menu">
+                <li>
+                    <a class="cookie" href="CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
+                    <a class="aboutUs" href="AboutUs.html">About us&emsp;&emsp;|</a>
+                    <a class="contact" href="ContactUs.html">Contact Us</a>
+                    <ul class="sosmed">
+                        <li>
+                            Follow us on :<br>
+                            <a class="instagram" href="instagram.com/BeautyEastJava"><img src="img/instagram.png" alt=""></a>
+                            <a class="facebook" href="facebook.com/BeautyEastJava"><img src="img/facebook.png" alt=""></a>
+                            <a class="twitter" href="twitter.com/BeautyEastJava"><img src="img/twitter.png" alt=""></a>
+                            <a class="youtube" href="youtube.com/BeautyEastJava"><img src="img/youtube.png" alt=""></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul><br>
+            <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
+        </div>
 </body>
+<script type="text/javascript">
+function validateIdentitas(){
+    var jumlah  = document.getElementById("jumlah").value;
+    var tanggal = document.getElementById("tanggal").value;
+    
+    if (jumlah =="" && tanggal == "") {
+        return true;
+    }else{
+        alert('Anda harus mengisi form dengan lengkap!');
+    }
+}
+</script>
 </html>
