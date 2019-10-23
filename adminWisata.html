@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
+    <title>Admin - Wisata</title>
     <link rel="icon" href="img/Ikon.ico">
     <style>
         *{
@@ -12,6 +12,12 @@
             padding: 0px;
         }
         /*HEADER*/
+        .header{
+            background-color: #012F52;
+            height: 90px;
+            width: 100%;
+        }
+        /*LOGO*/
         .logo{
             float: left;
             width: 170px;
@@ -21,51 +27,69 @@
             height: 90px;
             width: 170px;
         }
-        .header{
-            background-color: #012F52;
-            height: 90px;
-            width: 100%;
-        }
-        .akun button{
+        /*MENU UTAMA*/
+        .utama button{
+            background-color:#2F8758;
+            color: white;
             float: right;
-            background-color: transparent;
+            padding: 3px 55px 3px 55px;
             border: none;
             margin-top: 40px;
-            margin-right: 20px;
+            margin-right: 5px;
+            cursor:pointer;
+        }
+        .utama a{
+            text-decoration: none;
+        }
+        .utama button:hover{
+            background-color: white;     
+            color:#2F8758;
+        }
+        .gambar img:hover {
+            transform: scale(1.3);
+        }
+        /*AKUN*/
+        .akun img{
+            height: 40px;
+            width: 40px;
+            float: right;
+            margin-top: 40px;
+            margin-right: 10px;
+            margin-left: 5px;
             cursor: pointer;
         }
-        .akun a{
-            text-decoration: none;
-            color: white;
-            font-size: 15px;
-        }
-        .akun img {
-            width: 40px;
-            height: 40px;
-            margin-top: -20px;
-        }
         /*CONTENT*/
+        /*JUDUL*/
         .namaKota{
-            list-style: none;
-        }
-        .a{
-            font-size: 25px;
-            margin-left: 40%;
-            z-index: 1;
-            position: absolute;
-        }
-        .b{
-            background-color: #2F8758;
-            width: 200px;
-            text-align: center;
-            margin-left :43%;
             margin-top: 20px;
-            position: relative;
+            margin-left :42%;
         }
-        .b font{
-            font-size: 40px;
+        .namaKota font{
+            background-color: transparent;
+            padding: 7px 60px 7px 60px;
+            text-align: center;
+            font-size: 45px;
+            color: black;
+            font-weight: bold;
+            border-bottom: 5px double mediumturquoise;
+        }
+        /*TOMBOL TAMBAH*/
+        .tombol button {
+            padding: 10px 40px 10px 40px;
+            background-color: #7FFF00;
+            border: 0px;
+            cursor: pointer;
+            margin-top: 80px;
+            margin-left: 600px;
+            font-size: 15px;
+            font-weight: bold;
+            /*text-align: center;*/
+        }
+        .tombol button:hover {
+            background-color: deepskyblue;
             color: white;
         }
+        /*CARI*/
         .cari {
             top: 120px;
             background: #B3FF9E;
@@ -82,167 +106,186 @@
         .cari:hover {
          transform: translate(150px, 0);
          animation-timing-function: 1s ease-in; /*awal pelan*/
-     }
-     .cari .title {
-        top: 50%;
-        position: absolute;
-        transform: rotate(270deg);
-        right: 0px;
-        font-weight: 800;
-        font-size: 15px;
-    }
-    .cariKota{
-        position: absolute;
-        top: 15px;
-    }
-    .cariKota input{
-        width: 140px;
-        float: right;
-        margin-right: 40px;
-    }
-    .cariKota button{
-        width: 80px;
-        float: right;
-        margin-top: 5px;
-        margin-left: 27px;
-        margin-right: 70px;
-        background-color: lightseagreen;
-        border: none;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        color: white;
-    }
-    .cari .listKota {
-        position: absolute;
-        top: 15%;
-        left: 60px;
-        font-family: calibri;
-        font-size: 16px;
-        width: 130px;
-        height: 400px;
-        overflow-y: auto;
-    }
-    .cari .listKota li {
-        line-height: 30px;
-        list-style: none;
-    }
-    .cari .listKota li a {
-        text-decoration: none;
-        color: black;
-    }
-    .cari .listKota li a:hover{
-        color: lightseagreen;
-    }
-    .gambar{
-        margin-top: 30px;
-        margin-left: 50px;
-    }
-    .gambar img{
-        list-style: none;
-        width: 270px;
-        height: 180px;
-        margin-left: 40px;
-        margin-right: 3px;
-    }
-    .gambar table td{
-        font-family: Calibri;
-        font-size: 15px;
-        text-align: center;
-    }
-    @media screen and (max-width:1000px){
+        }
+        .cari .title {
+            top: 50%;
+            position: absolute;
+            transform: rotate(270deg);
+            right: 0px;
+            font-weight: 800;
+            font-size: 15px;
+        }
+        .cariKota{
+            position: absolute;
+            top: 15px;
+        }
+        .cariKota input{
+            width: 140px;
+            float: right;
+            margin-right: 40px;
+        }
+        .cariKota button{
+            width: 80px;
+            float: right;
+            margin-top: 5px;
+            margin-left: 27px;
+            margin-right: 70px;
+            background-color: lightseagreen;
+            border: none;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            color: white;
+        }
+        .cari .listKota {
+            position: absolute;
+            top: 15%;
+            left: 60px;
+            font-family: calibri;
+            font-size: 16px;
+            width: 130px;
+            height: 400px;
+            overflow-y: auto;
+        }
+        .cari .listKota li {
+            line-height: 30px;
+            list-style: none;
+        }
+        .cari .listKota li a {
+            text-decoration: none;
+            color: black;
+        }
+        .cari .listKota li a:hover{
+            color: lightseagreen;
+        }
+        /*GAMBAR*/
+        .gambar{
+            margin-top: 10px;
+            margin-left: 50px;
+        }
         .gambar img{
-            width: 180px;
-            height: 80px;
+            list-style: none;
+            width: 270px;
+            height: 180px;
+            margin-left: 40px;
+            margin-right: 3px;
         }
-    }
-    table td .button{
-        float: right;
-        padding: 10px 40px 10px 40px;
-        background-color: #7FFF00;
-        border: 0px;
-        cursor: pointer;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .th button{
-        padding: 5px;
-        width: 100px;
-        background-color: #20B2AA;
-        text-align: center;
-        position: relative;
-        left: 18px;
-    }
-    .gambar {
-        margin-right: 10px;
-    }
+        .gambar table td{
+            font-family: Calibri;
+            font-size: 15px;
+            text-align: center;
+        }
+        @media screen and (max-width:1000px){
+            .gambar img{
+                width: 180px;
+                height: 80px;
+            }
+        }
+        table td .button{
+            float: right;
+            padding: 10px 40px 10px 40px;
+            background-color: #7FFF00;
+            border: 0px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .th button{
+            padding: 5px;
+            width: 100px;
+            background-color: #20B2AA;
+            text-align: center;
+            position: relative;
+            left: 18px;
+        }
+        .gambar {
+            margin-right: 10px;
+        }
 
-    .item_gambar{
-        float: left;
-        padding: 5px;
-        width: 23%;
-        margin-right: 5px;
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .gambar_wrap{
-        /*width: 200px;*/
-        margin: auto;
-    }
-
-    .gambar_wrap img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    .tombol button {
-        padding: 10px 40px 10px 40px;
-        background-color: #7FFF00;
-        border: 0px;
-        cursor: pointer;
-        margin-top: 20px;
-        margin-bottom: -20px;
-        margin-left: 90px;
-        width: 25%;
-        /*text-align: center;*/
-    }
-    .tombol button:hover {
-        background-color: deepskyblue;
-        color: white;
-    }
-
-    @media screen and (max-width: 900px){
         .item_gambar{
-            width: 40%;
+            float: left;
+            padding: 5px;
+            width: 23%;
+            margin-right: 5px;
+            margin-top: 10px;
+            text-align: center;
         }
-    }
-
-    @media screen and (max-width: 600px){
-        .item_gambar{
-            width: 90%;
-            padding-right: 10px;
+        .gambar_wrap{
+            /*width: 200px;*/
+            margin: auto;
         }
-    }
-
-</style>
+        .gambar_wrap img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        @media screen and (max-width: 900px){
+            .item_gambar{
+                width: 40%;
+            }
+        }
+        @media screen and (max-width: 600px){
+            .item_gambar{
+                width: 90%;
+                padding-right: 10px;
+            }
+        }
+        /*FOOTER*/
+        .footer{
+            position: absolute;
+            margin-bottom: 0px;
+            width: 100%;
+            background-color: #B3FF9E;
+            height: 90px;
+            font-family: Calibri;
+            font-size: 15px;
+        }
+        .footer .footer-menu{
+            margin-top: 20px; 
+        }
+        .footer .footer-menu li a{
+            text-decoration: none;
+            margin-left: 30px;
+            color: black;
+        }
+        .footer .footer-menu li a:hover{
+            color:#012F52;
+        }
+        .sosmed{
+            text-align: center;
+            list-style: none;
+            float: right;
+            margin-right: 30px;
+            color: black;
+        }
+        .sosmed img{
+            width: 25px;
+            height: 25px;
+        }
+        .footer h5{
+            text-align: left;
+            margin-left: 600px;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <a href="HomeD.html"><img src="img/Logo.png"></a>
+            <a href="index.html"><img src="img/Logo.png"></a>
         </div>
         <div class="akun">
-            <button type="button"><a href="imgAkun.html"><img src="img/Akun.png" alt="profile"><br><font face="Freestyle script">Admin</a></font></button>
+            <a href="adminAkun.html"><img src="img/user_akun.png" alt="profile"></button></a>
+        </div>
+        <div class="utama">
+            <a href="adminEvent.html"><button type="button"><font face="Freestyle script"; font size="6px">Let's See an Event</font></button></a>
+            <a href="adminWisata.html"><button type="button"><font face="Freestyle script"; font size="6px">Goes to Wisata</font></button></a>
         </div>
     </div>
     <div class="content">
-        <div class="namaKota">
-            <li class="a">
-                <font face="Shalinta">Explore</font>
-            </li>
-            <li class="b">
-                <font face="Freestyle script">Malang</font>
-            </li>
+        <div class="namaKota"><font face="Freestyle script">Kota Malang</font></div>
+        <div class="tombol">
+            <a href="adminTambahItemWisata.html"><button class="button">Tambah Destinasi</button></a>
         </div>
         <div class="cari">
             <div class="title">SEARCH</div>
@@ -284,15 +327,23 @@
                 <li><a href="#">Tulungagung</a></li>
             </ul>
         </div>
-
-        <div class="tombol">
-            <a href="AdminTambahItem.html"><button class="button">Tambah Destinasi</button></a>
-        </div>
-
         <div class="gambar">
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
+                </div>
+
+                <div class="th">
+                    <a href="adminEditItemWisata.html"><button type="button">Edit</button></a>    
+                    <button>Hapus</button>
+                </div>
+
+                <h4>Jatim Park 3</h4>
+            </div>
+
+            <div class="item_gambar">
+                <div class="gambar_wrap">
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -305,7 +356,7 @@
 
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -318,20 +369,7 @@
 
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
-                </div>
-
-                <div class="th">
-                    <button>Edit</button>    
-                    <button>Hapus</button>
-                </div>
-
-                <h4>Jatim Park 3</h4>
-            </div>
-
-            <div class="item_gambar">
-                <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -343,7 +381,7 @@
             </div>
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -355,7 +393,7 @@
             </div>
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -367,7 +405,7 @@
             </div>
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -379,7 +417,7 @@
             </div>
             <div class="item_gambar">
                 <div class="gambar_wrap">
-                    <a href="EditJP3.html" title="Edit"><img src="img/MJatimPark3.jpg"></a>
+                    <a href="EditJP3.html"><img src="img/MJatimPark3.jpg"></a>
                 </div>
 
                 <div class="th">
@@ -457,6 +495,24 @@
             </table> -->
         </div> 
     </div>
-
+    <div class="footer">
+        <ul class="footer-menu">
+            <li>
+                <a class="cookie" href="img/CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
+                <a class="aboutUs" href="img/AboutUs.html">About us&emsp;&emsp;|</a>
+                <a class="contact" href="img/ContactUs.html">Contact Us</a>
+                <ul class="sosmed">
+                    <li>
+                        Follow us on :<br>
+                        <a class="instagram" href="instagram.com/BeautyEastJava"><img src="img/instagram.png" alt=""></a>
+                        <a class="facebook" href="facebook.com/BeautyEastJava"><img src="img/facebook.png" alt=""></a>
+                        <a class="twitter" href="twitter.com/BeautyEastJava"><img src="img/twitter.png" alt=""></a>
+                        <a class="youtube" href="youtube.com/BeautyEastJava"><img src="img/youtube.png" alt=""></a>
+                    </li>
+                </ul>
+            </li>
+        </ul><br>
+        <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
+    </div>
 </body>
 </html>
