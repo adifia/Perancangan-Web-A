@@ -158,36 +158,8 @@
             color: lightseagreen;
         }
         /*GAMBAR*/
-        .gambar{
-            margin-top: 10px;
-            margin-left: 50px;
-        }
         .gambar img{
-            list-style: none;
-            width: 270px;
-            height: 180px;
             margin-left: 40px;
-            margin-right: 3px;
-        }
-        .gambar table td{
-            font-family: Calibri;
-            font-size: 15px;
-            text-align: center;
-        }
-        @media screen and (max-width:1000px){
-            .gambar img{
-                width: 180px;
-                height: 80px;
-            }
-        }
-        table td .button{
-            float: right;
-            padding: 10px 40px 10px 40px;
-            background-color: #7FFF00;
-            border: 0px;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
         .th button{
             padding: 5px;
@@ -197,10 +169,6 @@
             position: relative;
             left: 18px;
         }
-        .gambar {
-            margin-right: 10px;
-        }
-
         .item_gambar{
             float: left;
             padding: 5px;
@@ -219,6 +187,12 @@
             object-fit: cover;
         }
         
+        @media screen and (max-width:1000px){
+            .gambar img{
+                width: 180px;
+                height: 80px;
+            }
+        }
         @media screen and (max-width: 900px){
             .item_gambar{
                 width: 40%;
