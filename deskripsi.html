@@ -45,6 +45,7 @@
             height: 35px;
         }
         /*CONTENT*/
+        /*JUDUL*/
         .judul{
             list-style: none;
             margin-top: 20px;
@@ -61,6 +62,7 @@
         .content{
             margin-top: 10px;
         }
+        /*GAMBAR*/
         .gambar{ /*lebar slide pada halaman*/
             width: 800px;
             height: 500px;
@@ -101,9 +103,6 @@
                 transform: translateX(-2400px);
             }
         }
-        @media screen and (max-width:900px){
-            
-        }
         .gambar {
             margin: 0 auto;
         }
@@ -131,34 +130,39 @@
             text-align: justify;
             font-family: calibri;
         }
-
         /*FOOTER*/
         .footer{
-            position: absolute;
-            margin-bottom: 0px;
+            bottom: 0px;
             width: 100%;
             background-color: #B3FF9E;
             height: 90px;
             font-family: Calibri;
             font-size: 15px;
         }
-        .footer .footer-menu{
-            margin-top: 20px; 
+        .footer-menu{
+            position: absolute;
+            margin-top: 20px;
+            list-style: none;
         }
-        .footer .footer-menu li a{
+        .footer-menu li a{
             text-decoration: none;
             margin-left: 30px;
             color: black;
         }
-        .footer .footer-menu li a:hover{
+        .footer-menu li a:hover{
             color:#012F52;
         }
         .sosmed{
+            float: right;
+            margin-right: 30px;
+            margin-top: 20px;
             text-align: center;
             list-style: none;
             float: right;
-            margin-right: 30px;
             color: black;
+        }
+        .sosmed li a{
+            padding: 10px;
         }
         .sosmed img{
             width: 25px;
@@ -167,7 +171,48 @@
         .footer h5{
             text-align: left;
             margin-left: 45%;
+            margin-top: 50px;
             color: black;
+        }
+        /*RESPONSIVE*/
+        @media screen and (max-width: 800px) {
+            .gambar{ /*lebar slide pada halaman*/
+                width: 500px;
+                height: 250px;
+            }
+            .slide img{
+                width: 500px;
+                height: 250px;
+            }
+            .slider{ /*lebar slide pada halaman*/
+                width: 550px;
+                height: 250px;
+            }
+            .slide{
+                width: 500px;
+                height: 250px;
+            }
+            .slide-holder{
+                -webkit-animation: scroller 20s infinite;
+                animation: scroller 20s infinite;
+            }
+            @-webkit-keyframes scroller{
+                0%{
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                }
+                33%{
+                    -webkit-transform: translateX(-500px);
+                    transform: translateX(-500px);
+                }
+                66% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                }
+            }
+            .judul font{
+                font-size: 30px;
+            }
         }
     </style>
 </head>
@@ -210,15 +255,15 @@
                 <a class="cookie" href="CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
                 <a class="aboutUs" href="AboutUs.html">About us&emsp;&emsp;|</a>
                 <a class="contact" href="ContactUs.html">Contact Us</a>
-                <ul class="sosmed">
-                    <li>
-                        Follow us on :<br>
-                        <a class="instagram" href="instagram.com/BeautyEastJava"><img src="img/instagram.png" alt=""></a>
-                        <a class="facebook" href="facebook.com/BeautyEastJava"><img src="img/facebook.png" alt=""></a>
-                        <a class="twitter" href="twitter.com/BeautyEastJava"><img src="img/twitter.png" alt=""></a>
-                        <a class="youtube" href="youtube.com/BeautyEastJava"><img src="img/youtube.png" alt=""></a>
-                    </li>
-                </ul>
+            </li>
+        </ul>
+        <ul class="sosmed">
+            <li>
+                Follow us on :<br>
+                <a class="instagram" href="http://www.instagram.com"><img src="img/instagram.png" alt=""></a>
+                <a class="facebook" href="http://www.facebook.com"><img src="img/facebook.png" alt=""></a>
+                <a class="twitter" href="http://www.twitter.com"><img src="img/twitter.png" alt=""></a>
+                <a class="youtube" href="http://www.youtube.com"><img src="img/youtube.png" alt=""></a>
             </li>
         </ul><br>
         <h5>&copy;Copyright 2019 BeautyofEastJava</h5>

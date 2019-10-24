@@ -28,7 +28,10 @@
             width: 170px;
         }
         /*MENU UTAMA*/
-        .utama button{
+        #open_menu{
+            display: none;
+        }
+        .menu-utama button{
             background-color:#2F8758;
             color: white;
             float: right;
@@ -38,10 +41,10 @@
             margin-right: 5px;
             cursor:pointer;
         }
-        .utama a{
+        .menu-utama a{
             text-decoration: none;
         }
-        .utama button:hover{
+        .menu-utama button:hover{
             background-color: white;     
             color:#2F8758;
         }
@@ -80,7 +83,7 @@
             border: 0px;
             cursor: pointer;
             margin-top: 80px;
-            margin-left: 600px;
+            margin-left: 45%;
             font-size: 15px;
             font-weight: bold;
             /*text-align: center;*/
@@ -241,6 +244,50 @@
             margin-left: 600px;
             color: black;
         }
+        @media screen and (max-width: 765px){
+            .menu-utama, .akun{
+                display: none;
+            }
+            #open_menu{
+                display: block;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                float: right;
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+            #open_menu img{
+                width: 30px;
+                height: 30px;
+            }
+            #open_menu:hover ul{
+                display: block;
+                float: right;
+                top: -5px;
+            }
+            #open_menu ul{
+                display: none;
+                position: relative;
+                z-index: 10;
+                background-color:#B3FF9E;
+                width: 170px;
+            }
+            #open_menu ul a{
+                text-decoration: none;
+                list-style: none;
+            }
+            #open_menu ul a li {
+                padding: 5px 10px 5px 10px;
+                color: black;
+                font-family: calibri;
+                font-size: 18px;
+            }
+            #open_menu ul li:hover{
+                background-color: #2F8758;
+                color: white;
+            }
+        }
     </style>
 </head>
 <body>
@@ -251,15 +298,22 @@
         <div class="akun">
             <a href="adminAkun.html"><img src="img/user_akun.png" alt="profile"></button></a>
         </div>
-        <div class="utama">
+        <div class="menu-utama">
             <a href="adminEvent.html"><button type="button"><font face="Freestyle script"; font size="6px">Let's See an Event</font></button></a>
             <a href="adminWisata.html"><button type="button"><font face="Freestyle script"; font size="6px">Goes to Wisata</font></button></a>
+        </div>
+        <div id="open_menu"><a href="#" onclick="openMenu()"><img src="img/menu.jpg"></a>
+            <ul>
+                <a href="akunAdmin.html"><li>Akun</li></a>
+                <a href="adminWisata.html"><li>Goes to Wisata</li></a>
+                <a href="adminEvent.html"><li>Let's See an Event</li></a>    
+            </ul>
         </div>
     </div>
     <div class="content">
         <div class="namaKota"><font face="Freestyle script">Kota Malang</font></div>
         <div class="tombol">
-            <a href="adminTambahItemWisata.html"><button class="button">Add Destination</button></a>
+            <a href="adminTambahItemWisata.html"><button type="button">Add Destination</button></a>
         </div>
         <div class="cari">
             <div class="title">SEARCH</div>
