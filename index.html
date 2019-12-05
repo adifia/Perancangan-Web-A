@@ -172,6 +172,18 @@
                 <button>Login with Facebook</button><br><br>
                 <p>Not a Member? <a href="#popup2">SignUp</a></p>
             </form>     
+            <!-- <div class="window">
+                <a href="#" class="close-button" title="Close">X</a>
+                <h2>LOGIN</h2>
+                <form name="log" action="#" onsubmit="validateLogin()">
+                    <input type="text" placeholder="Email Address" id="Email"><br><br>
+                    <input type="Password" placeholder="Password" id="Pass"><br><br>
+                    <button id="btn-login" type="submit">Login</button>
+                    <br><br>or<br>
+                    <button>Login with Facebook</button><br><br>
+                    <p>Not a Member? <a href="#popup2">SignUp</a></p>
+                </form>     
+            </div> -->
         </div>
     </div>
     <div id="popup2">
@@ -193,4 +205,34 @@
         </div>
     </div>
     </body>
+
+    <!-- javascript untuk form  -->
+    <script type="text/javascript">
+        function validateRegister() {
+            var name        = document.getElementById("name").value;
+            var username    = document.getElementById("usname").value;
+            var email       = document.getElementById("email").value;
+            var password    = document.getElementById("pass").value;
+
+            if (name != "" && username != "" && email != "" && password != "") {
+                return true;
+            } else {
+                alert('Anda harus mengisi form dengan lengkap!');
+            }        
+        }
+        function validateLogin() {
+            var email       = document.getElementById("Email").value;
+            var password    = document.getElementById("Pass").value;
+
+            if (email != "" && password != "") {
+                return true;
+            } else if (email == "admin" && password == "admin") {
+                return true;
+                document.location.href = "adminWisata.html";
+            }
+            else {
+                alert('Form login harus diisi dengan benar !');
+            }
+        }
+</script>
 </html>
