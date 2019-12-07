@@ -369,8 +369,8 @@
     color: black;
 }
 .bar_cari:hover {
-   transform: translate(150px, 0);
-   animation-timing-function: 1s ease-in; /*awal pelan*/
+ transform: translate(150px, 0);
+ animation-timing-function: 1s ease-in; /*awal pelan*/
 }
 .title {
     top: 50%;
@@ -830,8 +830,42 @@ table tr td img{
         margin-left: 15%;
     }
 }
+/*AKUN*/
+.biodata{
+    width: 80%;
+    margin-top: 80px;
+    margin-left: 10%;
+    background-color: white;
+    border: 7px dotted gray;
+    margin-bottom: 80px;
+}
+.biodata table{
+    font-family: calibri;
+    font-size: 20px;
+    padding: 50px 200px 100px 30px;
+}
+.biodata table td{
+    width: 100px;
+}
+.biodata button{
+    background-color: #00FFFF;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 80%;
+    margin-bottom: 30px;
+}
+.biodata button:hover{
+    background-color: #7ff000;
+}
+.body_akun{
+    background-color: mediumturquoise;
+}
+
 /* FOOTER */
 .footer{
+    /*position: absolute;*/
     bottom: 0px;
     width: 100%;
     background-color: #B3FF9E;
@@ -1143,18 +1177,18 @@ table tr td img{
 @media screen and (max-width: 600px){.item_gambar img{
     height: 230px;
 }
-    .footer{
-        height: 100px;
-    }
-    .footer-menu{
-        margin-top: 10px;
-        margin-left: 30px;
-    }
-    .sosmed{
-        margin-top: 30px;
-        margin-right: 33%;
-    }
-    .footer h5{
-        margin-left: 28%;
-    }
+.footer{
+    height: 100px;
+}
+.footer-menu{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.sosmed{
+    margin-top: 30px;
+    margin-right: 33%;
+}
+.footer h5{
+    margin-left: 28%;
+}
 }
