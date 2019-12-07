@@ -8,6 +8,7 @@
     <link rel="icon" href="img/Ikon.ico">
     <link href="css/CSS.css" rel="stylesheet" type="text/css" media="screen">
 </head>
+
 <body>
     <div class="body_akun">
         <div class="header">
@@ -47,7 +48,7 @@
                         <td>*****</td>
                     </tr>
                 </table>
-                <button type="button">Edit</button>
+                <button type="button" id="myBtn">Edit</button>
             </li>
         </div>
         <div class="footer">
@@ -69,6 +70,104 @@
             </ul><br>
             <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
         </div>
-    </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Edit Your Profile</h2>
+          </div>
+          <div class="modal-body">
+            <div class="modal_item">
+                <label>Nama</label>
+                <input type="text" name="nama">
+            </div>
+            <div class="modal_item">
+                <label>Alamat</label>
+                <input type="text" name="nama">
+            </div>
+            <div class="modal_item">
+                <label>Kota</label>
+                <select name="pilih_kota" id="pilih_kota">
+                    <option value>--Pilih Kota--</option>
+                    <option value="Bangkalan">Bangkalan</option>
+                    <option value="Banyuwangi">Banyuwangi</option>
+                    <option value="Batu">Batu</option>
+                    <option value="Blitar">Blitar</option>
+                    <option value="Bojonegoro">Bojonegoro</option>
+                    <option value="Bondowoso">Bondowoso</option>
+                    <option value="Gresik">Gresik</option>
+                    <option value="Jember">Jember</option>
+                    <option value="Jombang">Jombang</option>
+                    <option value="Kediri">Kediri</option>
+                    <option value="Lamongan">Lamongan</option>
+                    <option value="Lumajang">Lumajang</option>
+                    <option value="Madiun">Madiun</option>
+                    <option value="Magetan">Magetan</option>
+                    <option value="Malang">Malang</option>
+                    <option value="Mojokerto">Mojokerto</option>
+                    <option value="Nganjuk">Nganjuk</option>
+                    <option value="Ngawi">Ngawi</option>
+                    <option value="Pacitan">Pacitan</option>
+                    <option value="Pamekasan">Pamekasan</option>
+                    <option value="Pasuruan">Pasuruan</option>
+                    <option value="Ponorogo">Ponorogo</option>
+                    <option value="Probolinggo">Probolinggo</option>
+                    <option value="Simpang">Simpang</option>
+                    <option value="Sidoarjo">Sidoarjo</option>
+                    <option value="Situbondo">Situbondo</option>
+                    <option value="Sumenep">Sumenep</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Trenggalek">Trenggalek</option>
+                    <option value="Tuban">Tuban</option>
+                    <option value="Tulungagung">Tulungagung</option>
+                </select>
+            </div>
+            <div class="modal_item">
+                <label>Email</label>
+                <input type="text" name="nama">
+            </div>
+            <div class="modal_item">
+                <label>Password</label>
+                <input type="Password" name="nama" value="*******">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <a href="akun.html" type="button">Save</a>
+      </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+</script>
 </body>
 </html>
