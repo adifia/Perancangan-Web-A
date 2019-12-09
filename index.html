@@ -8,182 +8,170 @@
     <link rel="icon" href="img/Ikon.ico">
     <link href="css/CSS.css" rel="stylesheet" type="text/css" media="screen">
     <link href="JavaScript.js" rel="stylesheet" type="text/javascript">
-    </head>
-    <body>
-        <div class="bar">
-            <div class="bahasa">
-                <li><a href="#"></a>English-UK</a>
+</head>
+<body>
+    <div class="bar">
+        <div class="bahasa">
+            <li><a href="#"></a>English-UK</a>
+                <ul>
+                    <li><a href="#">English-US</a></li>
+                    <li><a href="#">Indonesian</a></li>
+                </ul>
+            </li>
+        </div>
+    </div>
+    <div class="header">
+        <ul>
+            <div class="logo">
+                <a href="index.html"><img src="img/Logo.png" alt="home"></a>
+            </div>
+            <div class="menu" id="menu_atas">
+                <div class="login">
+                    <a href="#popup"><button type="button"><img src="img/Akun.png"><br><font face="Calibri"; font size="2px">Login</font></button></a>
+                </div>
+                <div class="menu-utama">
+                    <a href="event.html"><button type="button"><font face="#">Let's See an Event</font></button></a>
+                    <a href="wisata.html"><button type="button"><font face="#">Goes to Wisata</font></button></a>
+                </div>
+                <div id="open_menu"><a href="#" onclick="openMenu()"><img src="img/menu.jpg"></a>
                     <ul>
-                        <li><a href="#">English-US</a></li>
-                        <li><a href="#">Indonesian</a></li>
+                        <a href="#popup"><li>Login</li></a>
+                        <a href="wisata.html"><li>Goes to Wisata</li></a>
+                        <a href="event.html"><li>Let's See an Event</li></a>    
                     </ul>
-                </li>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="content_index">
+        <div class="cari">
+            <input class="search" type="text" placeholder="Search here...">
+            <button type="button" value="Search">Search</button>
+        </div>
+        <div class="judul_index">
+            <font size="6px"; font color="#00FF7F">Welcome to</font><br>
+            <font size="10px"; font color="#FF8C00">the Beauty of East Java</font><br>
+        </div>
+        <div class="slider_index">
+            <div class="slide-holder_index">
+                <div class="slide_index"><img src="img/Bromo.jpg" alt=""/></div>
+                <div class="slide_index"><img src="img/merah.jpg" alt=""/></div>
+                <div class="slide_index"><img src="img/MNP.jpg" alt=""/></div>
             </div>
         </div>
-        <div class="header">
-            <ul>
-                <div class="logo">
-                    <a href="index.html"><img src="img/Logo.png" alt="home"></a>
+        <br><br><br><br>
+        <div id="ref_judul"><font face ="#">Refresh your day!</font></div>
+        <br>
+        <div class="referensi">
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#">
+                        <img src="img/GBromo-Probolinggo.jpg" height="180px">
+                    </a>
+                    <div class="nama_wisata">Gunung Bromo - Probolinggo</div>
                 </div>
-                <div class="menu" id="menu_atas">
-                    <div class="login">
-                        <a href="#popup"><button type="button"><img src="img/Akun.png"><br><font face="Calibri"; font size="2px">Login</font></button></a>
-                    </div>
-                    <div class="menu-utama">
-                        <a href="event.html"><button type="button"><font face="#">Let's See an Event</font></button></a>
-                        <a href="wisata.html"><button type="button"><font face="#">Goes to Wisata</font></button></a>
-                    </div>
-                    <div id="open_menu"><a href="#" onclick="openMenu()"><img src="img/menu.jpg"></a>
-                        <ul>
-                            <a href="#popup"><li>Login</li></a>
-                            <a href="wisata.html"><li>Goes to Wisata</li></a>
-                            <a href="event.html"><li>Let's See an Event</li></a>    
-                        </ul>
-                    </div>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#">
+                        <img src="img/GiliLabak-Madura.jpg" height="180px">
+                    </a>
+                    <div class="nama_wisata">Pantai Gili Labak - Madura</div>
                 </div>
-            </ul>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#.jpg">
+                        <img src="img/CiputraWaterPark-Surabaya.jpg" height="180px">
+                    </a>
+                    <div class="nama_wisata">Ciputra Water Park - Surabaya</div>
+                </div>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#">
+                        <img src="img/GuaGong-Pacitan.jpg" height="180px">
+                    </a>
+                    <div class="nama_wisata">Gua Gong - Pacitan</div>
+                </div>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="deskripsi.html">
+                        <img src="img/MJatimPark3.jpg" height="180px">
+                    </a>
+                    <div class="nama_wisata">Jatim Park 3 - Malang</div>
+                </div>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#">
+                        <img src="img/TelagaSarangan-Magetan.jpg" height="180px">
+                    </a>
+                    <div class="nama_wisata">Telaga Sarangan - Magetan</div>
+                </div>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#">
+                        <img src="img/KawahIjen-BWI.jpg" height="180">
+                    </a>
+                    <div class="nama_wisata">Kawah Ijen - Banyuwangi</div>
+                </div>
+            </div>
+
+            <div class="ref_gambar">
+                <div class="ref_item_gambar">
+                    <a href="#.jpg">
+                        <img src="img/PuncakB29-Lumajang.jpg" height="180">
+                    </a>
+                    <div class="nama_wisata">Puncak B29 - Lumajang</div>
+                </div>
+            </div>
+            <div class="all_gambar"></div>
         </div>
-        <div class="content_index">
-            <div class="cari">
-                <input class="search" type="text" placeholder="Search here...">
-                <button type="button" value="Search">Search</button>
-            </div>
-            <div class="judul_index">
-                <font size="6px"; font color="#00FF7F">Welcome to</font><br>
-                <font size="10px"; font color="#FF8C00">the Beauty of East Java</font><br>
-            </div>
-            <div class="slider_index">
-                <div class="slide-holder_index">
-                    <div class="slide_index"><img src="img/Bromo.jpg" alt=""/></div>
-                    <div class="slide_index"><img src="img/merah.jpg" alt=""/></div>
-                    <div class="slide_index"><img src="img/MNP.jpg" alt=""/></div>
-                </div>
-            </div>
-            <br><br><br><br>
-            <div id="ref_judul"><font face ="#">Refresh your day!</font></div>
-            <br>
-            <div class="referensi">
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#">
-                            <img src="img/GBromo-Probolinggo.jpg" height="180px">
-                        </a>
-                        <div class="nama_wisata">Gunung Bromo - Probolinggo</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#">
-                            <img src="img/GiliLabak-Madura.jpg" height="180px">
-                        </a>
-                        <div class="nama_wisata">Pantai Gili Labak - Madura</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#.jpg">
-                            <img src="img/CiputraWaterPark-Surabaya.jpg" height="180px">
-                        </a>
-                        <div class="nama_wisata">Ciputra Water Park - Surabaya</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#">
-                            <img src="img/GuaGong-Pacitan.jpg" height="180px">
-                        </a>
-                        <div class="nama_wisata">Gua Gong - Pacitan</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="deskripsi.html">
-                            <img src="img/MJatimPark3.jpg" height="180px">
-                        </a>
-                        <div class="nama_wisata">Jatim Park 3 - Malang</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#">
-                            <img src="img/TelagaSarangan-Magetan.jpg" height="180px">
-                        </a>
-                        <div class="nama_wisata">Telaga Sarangan - Magetan</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#">
-                            <img src="img/KawahIjen-BWI.jpg" height="180">
-                        </a>
-                        <div class="nama_wisata">Kawah Ijen - Banyuwangi</div>
-                    </div>
-                </div>
-
-                <div class="ref_gambar">
-                    <div class="ref_item_gambar">
-                        <a href="#.jpg">
-                            <img src="img/PuncakB29-Lumajang.jpg" height="180">
-                        </a>
-                        <div class="nama_wisata">Puncak B29 - Lumajang</div>
-                    </div>
-                </div>
-                <div class="all_gambar"></div>
-            </div>
-        </div>
-        <br><br><br>
-        <div class="footer">
-            <ul class="footer-menu">
-                <li>
-                    <a class="cookie" href="CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
-                    <a class="aboutUs" href="AboutUs.html">About us&emsp;&emsp;|</a>
-                    <a class="contact" href="ContactUs.html">Contact Us</a>
-                </li>
-            </ul>
-            <ul class="sosmed">
-                <li>
-                    Follow us on :<br>
-                    <a class="instagram" href="http://www.instagram.com"><img src="img/instagram.png" alt=""></a>
-                    <a class="facebook" href="http://www.facebook.com"><img src="img/facebook.png" alt=""></a>
-                    <a class="twitter" href="http://www.twitter.com"><img src="img/twitter.png" alt=""></a>
-                    <a class="youtube" href="http://www.youtube.com"><img src="img/youtube.png" alt=""></a>
-                </li>
-            </ul><br>
-            <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
-        </div>
+    </div>
+    <br><br><br>
+    <div class="footer">
+        <ul class="footer-menu">
+            <li>
+                <a class="cookie" href="CookiePolicy.html">Cookie Policy &emsp;&emsp;|</a>
+                <a class="aboutUs" href="AboutUs.html">About us&emsp;&emsp;|</a>
+                <a class="contact" href="ContactUs.html">Contact Us</a>
+            </li>
+        </ul>
+        <ul class="sosmed">
+            <li>
+                Follow us on :<br>
+                <a class="instagram" href="http://www.instagram.com"><img src="img/instagram.png" alt=""></a>
+                <a class="facebook" href="http://www.facebook.com"><img src="img/facebook.png" alt=""></a>
+                <a class="twitter" href="http://www.twitter.com"><img src="img/twitter.png" alt=""></a>
+                <a class="youtube" href="http://www.youtube.com"><img src="img/youtube.png" alt=""></a>
+            </li>
+        </ul><br>
+        <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
+    </div>
 
 
-        <!-- popo up login dan register -->
-        <div id="popup">
+    <!-- popo up login dan register -->
+    <div id="popup">
         <div class="window">
             <a href="#" class="close-button" title="Close">X</a>
             <h2>LOGIN</h2>
-            <form name="log" action="index.html" onsubmit="validateLogin()">
+            <form name="log" onsubmit="validateLogin()">
                 <input type="text" placeholder="Email Address" id="Email"><br><br>
                 <input type="Password" placeholder="Password" id="Pass"><br><br>
                 <button id="btn-login" href="#" type="submit">Login</button>
                 <br><br>or<br>
                 <button>Login with Facebook</button><br><br>
                 <p>Not a Member? <a href="#popup2">SignUp</a></p>
-            </form>     
-            <!-- <div class="window">
-                <a href="#" class="close-button" title="Close">X</a>
-                <h2>LOGIN</h2>
-                <form name="log" action="#" onsubmit="validateLogin()">
-                    <input type="text" placeholder="Email Address" id="Email"><br><br>
-                    <input type="Password" placeholder="Password" id="Pass"><br><br>
-                    <button id="btn-login" type="submit">Login</button>
-                    <br><br>or<br>
-                    <button>Login with Facebook</button><br><br>
-                    <p>Not a Member? <a href="#popup2">SignUp</a></p>
-                </form>     
-            </div> -->
+            </form>
         </div>
     </div>
     <div id="popup2">
@@ -204,35 +192,34 @@
             </form>     
         </div>
     </div>
-    </body>
+</body>
 
-    <!-- javascript untuk form  -->
-    <script type="text/javascript">
-        function validateRegister() {
-            var name        = document.getElementById("name").value;
-            var username    = document.getElementById("usname").value;
-            var email       = document.getElementById("email").value;
-            var password    = document.getElementById("pass").value;
+<!-- javascript untuk form  -->
+<script type="text/javascript">
+    function validateRegister() {
+        var name        = document.getElementById("name").value;
+        var username    = document.getElementById("usname").value;
+        var email       = document.getElementById("email").value;
+        var password    = document.getElementById("pass").value;
 
-            if (name != "" && username != "" && email != "" && password != "") {
-                return true;
-            } else {
-                alert('Anda harus mengisi form dengan lengkap!');
-            }        
+        if (name != "" && username != "" && email != "" && password != "") {
+            return true;
+        } else {
+            alert('Anda harus mengisi form dengan lengkap!');
+        }        
+    }
+    function validateLogin() {
+        var email       = document.getElementById("Email").value;
+        var password    = document.getElementById("Pass").value;
+
+        if (email == "admin" && password == "admin") {
+            document.location.href = "adminWisata.html";
+        } else if (email != "" && password != "") {
+            return true;
+        }  
+        else {
+            alert('Form login harus diisi dengan benar !');
         }
-        function validateLogin() {
-            var email       = document.getElementById("Email").value;
-            var password    = document.getElementById("Pass").value;
-
-            if (email != "" && password != "") {
-                return true;
-            } else if (email == "admin" && password == "admin") {
-                return true;
-                document.location.href = "adminWisata.html";
-            }
-            else {
-                alert('Form login harus diisi dengan benar !');
-            }
-        }
+    }
 </script>
 </html>
