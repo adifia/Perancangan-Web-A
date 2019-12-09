@@ -861,9 +861,10 @@ table tr td img{
 }
 .biodata #myBtn:hover{
     background-color: #7ff000;
+    color: white;
 }
 .biodata #logout{
-    background-color: #00FFFF;
+    background-color: red;
     padding: 5px 20px 5px 20px;
     border: none;
     font-weight: bold;
@@ -875,12 +876,13 @@ table tr td img{
 }
 .biodata #logout:hover{
     background-color: #7ff000;
+    color: white;
 }
 .body_akun{
     background-color: mediumturquoise;
 }
 
-/*MODAL AKUN*/
+/*MODAL EDIT AKUN*/
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */

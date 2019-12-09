@@ -312,6 +312,122 @@ form{
     width: 200px;
 }
 
+
+/*MODAL ADMIN*/
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  margin-top: 100px;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 7px 16px;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 10px 16px 10px 10px;
+  /*background-color: #012F52;*/
+  color: white;
+  margin-top: 5px;
+}
+.modal-footer a{
+    margin-top: 5px;
+    padding: 5px 20px 5px 20px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    text-decoration-line: none;
+    margin-left: 20%;
+    font-weight: bold;
+    font-size: 17px;
+}
+#back:hover{
+    background-color: red;
+}
+.modal-footer a:hover{
+   background-color: yellow;
+   color: black;
+}
+.modal_item{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.modal_item h2{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.modal_item input, .modal_item select{
+    padding: 10px;
+    width: 97%;
+}
+.modal_item select{
+    width: 40%;
+}
+
+
 /*FOOTER*/
 .footer{
     bottom: 0px;
@@ -381,6 +497,9 @@ form{
 }
 .menuItemGambar button:hover{
     background-color: #7fff00;
+}
+#myBtn:hover {
+    background-color: red;
 }
 .nama_wisata {
     margin-top: -10px;
