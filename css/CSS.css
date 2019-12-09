@@ -476,6 +476,7 @@
 .gambar_menu{
     margin-left: 40px;
     margin-right: 10px;
+    overflow: hidden;
 }
 .item_gambar img {
     width: 100%;
@@ -970,6 +971,26 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 .modal_item select{
     width: 40%;
+}
+
+/*BTN MORE AJAX*/
+.btn-more {
+    margin-bottom: 30px;
+}
+.btn-more a{
+    padding: 7px 20px 7px 20px;
+    background-color:#90EE90;
+    text-align: center;
+    margin-left: 47%;
+    text-decoration-line: none;
+    color: black;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #191970;
+}
+.btn-more a:hover{
+    background-color: #ADFF2F;
+    color: white;
 }
 
 /* FOOTER */

@@ -86,7 +86,7 @@
             </li>
         </div>
         <br>
-        <div class="gambar_menu">
+        <div class="gambar_menu" id="list_item" page="">
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="deskripsi.html">
@@ -104,16 +104,16 @@
                     <div class="nama_wisata">Kampung Tridi</div>
                 </div>
             </div>
-              
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#.jpg">
                         <img src="img/MSelecta.jpg" height="180px">
                     </a>
-                <div class="nama_wisata">Selecta</div>
+                    <div class="nama_wisata">Selecta</div>
+                </div>
             </div>
-                  </div>
-                  
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#">
@@ -140,16 +140,16 @@
                     <div class="nama_wisata">Taman Alun-Alun Kota Malang</div>
                 </div>
             </div>
-              
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#">
                         <img src="img/MPBatuBengkung.jpg" height="180">
                     </a>
-                <div class="nama_wisata">Pantai Batu Bengkung</div>
+                    <div class="nama_wisata">Pantai Batu Bengkung</div>
+                </div>
             </div>
-                  </div>
-                  
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#.jpg">
@@ -159,7 +159,9 @@
                 </div>
             </div>
 
-            <div class="gambar">
+            
+
+          <!--   <div class="gambar">
                 <div class="item_gambar">
                     <a href="#">
                         <img src="img/MJatimPark1.jpg" height="180px">
@@ -176,16 +178,16 @@
                     <div class="nama_wisata">Batu Night Spectacular</div>
                 </div>
             </div>
-              
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#.jpg">
                         <img src="img/MHawai.jpg" height="180px">
                     </a>
-                <div class="nama_wisata">Hawai</div>
+                    <div class="nama_wisata">Hawai</div>
+                </div>
             </div>
-                  </div>
-                  
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#">
@@ -212,16 +214,16 @@
                     <div class="nama_wisata">Penginapan Omah Kayu</div>
                 </div>
             </div>
-              
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#">
                         <img src="img/MCandiBatu.jpg" height="180">
                     </a>
-                <div class="nama_wisata">Candi Batu</div>
+                    <div class="nama_wisata">Candi Batu</div>
+                </div>
             </div>
-                  </div>
-                  
+
             <div class="gambar">
                 <div class="item_gambar">
                     <a href="#.jpg">
@@ -229,9 +231,14 @@
                     </a>
                     <div class="nama_wisata">Paralayang</div>
                 </div>
-            </div>      
+            </div>  --> 
+
             <div class="all_gambar"></div>
+
         </div>
+        <div class="btn-more" id="btn-more">
+            <a href="#">More...</a>
+        </div>  
     </div>
     <br><br>
     <div class="footer">
@@ -264,5 +271,55 @@
       x.style.width = "270px";
   }
 </script> -->
+
+<script src="jQuery.js"></script>
+<script>
+    $("#btn-more").click(function (event) {
+        event.preventDefault();
+        var hal = $("#list_item").attr('page');
+        hal = Number(hal);
+
+        if (hal == "") {
+            hal = 1;
+        }
+        else{
+            hal+=1;
+        }
+
+        $("#list_item").attr('page', hal);
+        if (hal == 2) {
+            $("#btn-more").hide();
+        }
+
+        var path = "json/item_"+hal+".json";
+
+        $.ajax({
+            url:path,
+            type: 'GET',
+            dataType: 'json'
+        })
+        .done(function(data){
+            console.log("success");
+            var gabung = "";
+            $.each(data, function (index, val) {
+             gabung+=`
+             <div class="gambar">
+             <div class="item_gambar">
+             <a href="#.jpg">
+             <img src="`+val.img+`" height="180">
+             </a>
+             <div class="nama_wisata">`+val.judul+`</div>
+             </div>
+             </div>
+             ` 
+         });
+
+            $("#list_item").append(gabung);
+        })
+        .fail(function () {
+            console.log("error");
+        });
+    })
+</script>
 </body>
 </html>
