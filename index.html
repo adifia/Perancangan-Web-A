@@ -214,9 +214,11 @@
 
         if (email == "admin" && password == "admin") {
             document.location.href = "adminWisata.html";
-        } else if (email != "" && password != "") {
-            return true;
-        }  
+        } else if (email == "user" && password == "user") {
+            document.location.href = "wisata.html";
+        }// } else if (email != "" && password != "") {
+        //     return true;
+        // }  
         else {
             alert('Form login harus diisi dengan benar !');
         }
