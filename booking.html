@@ -19,6 +19,7 @@
     </div>
     <div class="content">
         <div class="judul"><font face="#">Booking</font></div>
+        <form name="log" onsubmit="validateBooking()">
         <li class="identitas">
             <table>
                 <tr>
@@ -35,11 +36,11 @@
                 </tr>
                 <tr>
                     <td>Jumlah Orang</td>
-                    <td><input type="number" name="jumlah"</td>
+                    <td><input type="number" id="jumlah"></td>
                 </tr>
                 <tr>
                     <td>Tanggal keberangkatan</td>
-                    <td><input type="date" name="tanggal"></td>
+                    <td><input type="date" id="tanggal"></td>
                 </tr>
             </table>
         </li>
@@ -64,7 +65,8 @@
                 </tr>
             </table>
         </li>
-        <li id="pesan"><a href="pembayaran.html"><button type="button">Check Out</button></a></li>
+        <li id="pesan"><a href="pembayaran.html" onsubmit="validateBooking"><button type="button">Check Out</button></a></li>
+    </form>
         <br><br><br>
     </div>
     <div class="footer">
@@ -87,4 +89,17 @@
         <h5>&copy;Copyright 2019 BeautyofEastJava</h5>
     </div>
 </body>
+<script type="text/javascript">
+function validateBooking(){
+    var jumlah = document.getElementById("jumlah").value;
+    var tanggal = document.getElementById("tanggal").value;
+
+    if (jumlah != "" && tanggal != ""){
+        return true;
+    }
+    else{
+        alert('Anda harus mengisi form dengan lengkap!');
+    }
+}
+</script>
 </html>
