@@ -108,7 +108,7 @@
 .cari {
     background: #B3FF9E;
     width: 190px;
-    height: 520px;
+    height: 450px;
     padding-right: 40px;/*search*/
     position: fixed;
     z-index: 1;
@@ -157,7 +157,7 @@
     font-family: calibri;
     font-size: 16px;
     width: 130px;
-    height: 400px;
+    height: 350px;
     overflow-y: auto;
 }
 .listKota li {
