@@ -991,6 +991,49 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 40%;
 }
 
+/*TABEL WISATA TERDEKAT*/
+.terdekat {
+    /*margin : 0px 1000px 50px 50px;*/
+}
+.terdekat img{
+    width: 270px;
+    height: 200px;
+}
+.terdekat table{
+    /*border-collapse: collapse;*/
+    border: none;
+    width: 90%;
+    text-align: center;
+    padding: 30px;
+    margin-left: 80px;
+    padding-right: 80px;
+}
+.terdekat table tr td{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #3CB371;
+    /*padding-right: 300px;*/
+}
+.terdekat tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.terdekat a{
+    padding: 5px 25px 5px 25px;
+    background-color: #00FF7F;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration-line: none;
+    color: #006400;
+}
+.terdekat a:hover{
+    background-color: #1E90FF;
+    color: white;
+}
+.gbr{
+    width: 20%;
+}
+
 /*BTN MORE AJAX*/
 .btn-more {
     margin-bottom: 30px;
