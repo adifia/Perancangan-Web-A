@@ -40,7 +40,7 @@
 .bahasa ul { /*pilihan bahasa*/
     display:none; /*biar gak kelihatan sebelum di tunjuk*/
     list-style:none; 
-    position:absolute; 
+    position:absolute; /*biar bisa ngambang*/
     background-color:#B3FF9E;
     top:20px;
 }
@@ -100,7 +100,7 @@
     color:#2F8758;
 }
 /*LOGIN*/
-.login button img{
+.login img{
     height: 25px;
     width: 25px;
 }
@@ -143,7 +143,6 @@
     padding: 10px;
     text-align: center;
     margin: 10% auto;
-
 }
 /*tombol tutup*/
 .close-button, .close-button2 {
@@ -493,28 +492,29 @@
     text-align: center;
 }
 /*SLIDE INDEX*/
-.slide_index img{
-    width: 1200px;
-    height: 500px;
-}
 .slider_index{ /*lebar slide pada halaman*/
     width: 1200px;
     height: 500px;
     overflow: hidden;
     border: none;
+    margin: 0 auto;
+}
+.slide-holder_index{
+    width: 300%;
+    position: relative;
+    left: 0;
+    -webkit-animation: scroller 10s infinite;
+    animation: scroller 20s infinite;
 }
 .slide_index{
     width: 1200px;
     height: 500px;
     float: left;
-    position: relative;
+    /* position: relative; */
 }
-.slide-holder_index{
-    width: 400%;
-    position: relative;
-    left: 0;
-    -webkit-animation: scroller 10s infinite;
-    animation: scroller 20s infinite;
+.slide_index img{
+    width: 1200px;
+    height: 500px;
 }
 @-webkit-keyframes scroller{
     0%{
@@ -529,9 +529,6 @@
         -webkit-transform: translateX(-2400px);
         transform: translateX(-2400px);
     }
-}
-.slider_index {
-    margin: 0 auto;
 }
 /*REFERENSI INDEX*/
 #ref_judul{
